@@ -12,10 +12,11 @@ jobs:
 
     steps:
     
-    - name: Checkout
-      uses: actions/checkout@v1
+    - uses: actions/checkout@v1
       with:
        persist-credentials: false
+    - run: git config --global user.email ${{ secrets.USER_EMAIL }}
+    - run: git config --global user.name ${{ secrets.USER_NAME }}
 
     - name: Build
       run: |
