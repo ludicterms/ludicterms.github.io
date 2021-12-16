@@ -1,0 +1,103 @@
+@import "../UI/StyleVariables.css";
+
+/* main section overall */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+footer {
+  background-color: var(--dark-grey);
+  color: #bbb;
+  line-height: 1.5;
+}
+footer a {
+  text-decoration: none;
+  color: #eee;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.ftTitle {
+  color: #fff;
+  font-size: 24px;
+  padding-bottom: 2px;
+}
+.ftMain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.ftMainItem {
+  padding: 5px;
+  min-width: 12.5rem /*200px*/;
+}
+
+@media only screen and (min-width: 477px) {
+  .ftMain {
+    justify-content: space-around;
+  }
+}
+@media only screen and (min-width: 1240px) {
+  .ftMain {
+    justify-content: space-evenly;
+  }
+}
+
+/* Sign-up form */
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+input[type="email"] {
+    border: 0;
+    padding: 0.625rem;
+    margin-top: 0.3125rem;
+}
+input[type="submit"] {
+    background-color: #00d188;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    padding: 0.625rem 0.9375rem;
+    margin-top: 0.3125rem;
+}
+
+/* social section */
+
+.ftSocial {
+    padding: 5px;
+}
+.ftSocialList {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-top: 1px var(--medium-grey) solid; 
+    padding-top: 1.25rem;
+}
+.ftSocialList li {
+    margin: 10px;
+    font-size: 1.25rem;
+}
+
+/* legal section */
+
+.ftLegal {
+    padding: 0.9375rem 1.875rem;
+    background-color: var(--darkblue);
+}
+.ftLegalList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.ftLegalList li {
+    margin: 0.125rem 0.625rem;
+    text-align: center
+}
+/* one before the last child */
+.ftLegalList li:nth-last-child(2) {
+    flex: 1;       /* same as flex-grow: 1; */
+}

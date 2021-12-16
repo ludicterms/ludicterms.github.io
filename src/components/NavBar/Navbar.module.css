@@ -1,0 +1,63 @@
+@import "../UI/StyleVariables.css";
+
+header {
+  width: 100%;
+  min-height: 10vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  align-items: center;
+  transition: all 0.3s ease-in;
+  background: var(--darkblue);
+  color: white;
+  padding: 0 1rem 0 1rem;
+}
+
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+header a:hover, header a:active {
+  text-decoration: none;
+  color: white;
+}
+
+.scrolled {
+  background: var(--dark-grey);
+}
+
+.buttonContainer {
+  display: flex;
+  flex-flow: row;
+  gap: 10px;
+  justify-content: flex-end;
+  align-content: center;
+}
+
+nav a {
+  text-align: center;
+  align-self: center;
+  background: var(--light-grey);
+  color: var(--darkblue);
+  border-radius: 8px;
+  padding: 6px 4px;
+  width: 100px;
+  height: 20px;
+  border: 1px solid var(--light-grey);
+  box-shadow: 0 2px 5px rgba(220, 220, 220, 220, 0.2);
+  cursor: pointer;
+}
+
+nav a:hover,
+nav a:active,
+a.active {
+  text-decoration: none;
+  background-color: var(--dark-grey);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+  color: white;
+}
