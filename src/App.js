@@ -1,6 +1,6 @@
 //import { useState } from "react";
 //import useApiData from "./hooks/useApiData";
-import Home from "./pages/Home";
+//import Home from "./pages/Home";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import Contents from "./pages/Contents";
