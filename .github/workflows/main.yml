@@ -19,13 +19,12 @@ jobs:
     - run: git config --global user.name ${{ secrets.USER_NAME }}
 
     - name: Build
+      env:
+          REACT_APP_CONTENTFUL_ACCESS_TOKEN: ${{ secrets.REACT_APP_CONTENTFUL_ACCESS_TOKEN }}
+          REACT_APP_CONTENFUL_SPACE_ID: ${{ secrets.REACT_APP_CONTENFUL_SPACE_ID }}
       run: |
         npm install
         npm run build
-
-      env:
-        REACT_APP_CONTENTFUL_ACCESS_TOKEN: ${{ secrets.REACT_APP_CONTENTFUL_ACCESS_TOKEN }}
-        REACT_APP_CONTENFUL_SPACE_ID: ${{ secrets.REACT_APP_CONTENFUL_SPACE_ID }}
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
