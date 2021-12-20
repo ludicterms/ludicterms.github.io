@@ -12,6 +12,21 @@ body {
   flex-direction: column;
 }
 
+h1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 30px;
+  display: block;
+  text-align: justify;
+}
+
 .centered {
   margin: 2rem auto;
   text-align: center;

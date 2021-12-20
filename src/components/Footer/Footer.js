@@ -38,7 +38,7 @@ const Footer = () => {
           <h2 className={styles.ftTitle}>Support EoLT</h2>
           <ul>
             <li>
-              <Link to="/support-us">How to support us</Link>
+              <Link to="/">How to support us</Link>
             </li>
             <li>
               <a href="/">Make A Donation</a>
@@ -104,7 +104,7 @@ const Footer = () => {
           <li>
             <a href="/">Privacy Policy</a>
           </li> */}
-          <li>The Encyclopedia of Ludic Terms is Copyright &copy; 2021 by XXX</li>
+          <li>The Encyclopedia of Ludic Terms is Copyright &copy; 2021 {/* by XXX */}</li>
         </ul>
       </section>
     </footer>

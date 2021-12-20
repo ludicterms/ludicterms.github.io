@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import Contents from "./pages/Contents";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import ContentDetail from "./pages/ContentDetail";
 import About from "./pages/About";
 import Support from "./pages/Support";
@@ -19,7 +19,7 @@ const App = () => {
         <Route
           path="/"
           element={
-            <Home />
+            <Navigate replace to="/about-us" />
           }
         />
         <Route

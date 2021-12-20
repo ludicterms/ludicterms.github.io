@@ -38,7 +38,7 @@ const NavBar = (props) => {
             About us
           </NavLink>
           <NavLink
-            to="support-us"
+            to="/"
             className={(navData) =>
               navData.isActive ? styles.active : styles.btnLight
             }
