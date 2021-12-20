@@ -21,16 +21,16 @@ jobs:
     - name: Build
       run: |
         npm install
-        npm run deploy
+        npm run build
 
       env:
         REACT_APP_CONTENTFUL_ACCESS_TOKEN: ${{ secrets.REACT_APP_CONTENTFUL_ACCESS_TOKEN }}
         REACT_APP_CONTENFUL_SPACE_ID: ${{ secrets.REACT_APP_CONTENFUL_SPACE_ID }}
 
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
+    - name: Deploy with gh-pages
+      run: |
+        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+      env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: build
 
