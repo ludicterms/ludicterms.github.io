@@ -10,16 +10,16 @@ const Footer = () => {
           <h2 className={styles.ftTitle}>About</h2>
           <ul>
             <li>
-              <Link to="/about-us">Project Group</Link>
+              <Link to="/">Editorial Information</Link>
             </li>
             <li>
-              <a href="/">Editorial Information</a>
+              <Link to="/">About EoLT</Link>
             </li>
             <li>
-              <a href="/">How to Cite the EoLT</a>
+              <Link to="/">How to Cite the EoLT</Link>
             </li>
             <li>
-              <a href="/">Contact</a>
+              <Link to="/">Contact</Link>
             </li>
           </ul>
         </div>
@@ -27,10 +27,16 @@ const Footer = () => {
           <h2 className={styles.ftTitle}>Browse</h2>
           <ul>
             <li>
-              <a href="/">Table of Contents</a>
+              <Link to="/">Table of Contents</Link>
             </li>
             <li>
-              <a href="/">Archives</a>
+              <Link to="/">Archive</Link>
+            </li>
+            <li>
+              <Link to="/">List of Authors</Link>
+            </li>
+            <li>
+              <Link to="/">Log of Changes</Link>
             </li>
           </ul>
         </div>
@@ -38,10 +44,7 @@ const Footer = () => {
           <h2 className={styles.ftTitle}>Support EoLT</h2>
           <ul>
             <li>
-              <Link to="/support-us">How to support us</Link>
-            </li>
-            <li>
-              <a href="/">Make A Donation</a>
+              <Link to="/support-us">How to support EoLT</Link>
             </li>
           </ul>
         </div>
@@ -60,7 +63,7 @@ const Footer = () => {
       </section>
 
       {/* <!-- Footer social --> */}
-      <section className={styles.ftSocial}>
+      {/* <section className={styles.ftSocial}>
         <ul className={styles.ftSocialList}>
           <li>
             <a href="/">
@@ -93,7 +96,7 @@ const Footer = () => {
             </a>
           </li>
         </ul>
-      </section>
+      </section> */}
 
       {/* <!-- Footer legal --> */}
       <section className={styles.ftLegal}>

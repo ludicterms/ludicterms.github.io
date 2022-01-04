@@ -6,6 +6,7 @@ import Section from "../components/UI/Section/Section";
 import CardContainer from "../components/CardContainer/CardContainer";
 import { Link } from "react-router-dom";
 import { useArticles } from "../hooks/useArticles";
+import Button from "../components/UI/Button/Button";
 
 const Home = () => {
   const [articles, isLoading] = useArticles();
@@ -41,13 +42,12 @@ const Home = () => {
 
       {!isActive && (
         <React.Fragment>
-          <Link
-            to="contents"
+          <Button
+            path={"contents"}
             className="btnDark centered"
             style={{ width: "100px", height: "20px" }}
-          >
-            Browse
-          </Link>
+            buttonName={"Browse"}
+           />
           <Info />
         </React.Fragment>
       )}

@@ -8,7 +8,7 @@ const Card = (props) => {
     <Link className={styles.cardsWrapper} style={{textDecoration: "none"}} key={key} to={key}>
       <div className={styles.card}>
         <h1>{props.data.fields.mainTitle}</h1>
-        <p> {props.data.fields.abstract}</p>
+        <p className={styles.preview}> {props.data.fields.abstract}</p>
         <p>Author: {props.data.fields.author}</p>
       </div>
     </Link>

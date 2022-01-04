@@ -10,6 +10,27 @@ body {
   display: flex;
   min-height: 1200px;
   flex-direction: column;
+  overflow-wrap: break-word;
+}
+
+.pageTitle h1 {
+  font-size: 40px;
+}
+
+h1{
+  font-size: 32px;
+}
+
+h2 {
+  margin-top: 40px;
+  font-size: 25px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 32px;
+  display: block;
+  text-align: justify;
 }
 
 .centered {
@@ -21,12 +42,24 @@ body {
   align-items: center;
 }
 
+.leftAligned {
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-itself: flex-start;
+}
+
 .btnDark {
   text-decoration: none;
   background: var(--darkblue);
+  font-size: 16px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
   color: var(--light-grey);
   border-radius: 8px;
-  padding: 0.75rem 1.5rem;
+  padding: 15px 20px;
   border: 2px solid var(--darkblue);
   cursor: pointer;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
@@ -35,6 +68,29 @@ body {
 
 .btnDark:hover,
 .btnDark:active {
+  text-decoration: none;
+  background-color: var(--light-grey);
+  border-color: var(--darkblue);
+  color: var(--darkblue);
+}
+
+.btnLight {
+  text-decoration: none;
+  background: var(--dark-grey);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: var(--light-grey);
+  border-radius: 8px;
+  padding: 12px 17px;
+  border: 2px solid var(--darkblue);
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+  
+}
+
+.btnLight:hover,
+.btnLight:active {
   text-decoration: none;
   background-color: var(--light-grey);
   border-color: var(--darkblue);

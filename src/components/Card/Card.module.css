@@ -29,3 +29,11 @@
 .card:active {
   background-color: var(--light-grey);
 }
+
+.preview {
+  line-height: 20px;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
