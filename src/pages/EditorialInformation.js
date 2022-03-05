@@ -14,7 +14,6 @@ const StyledLink = styled(Link)`
         text-decoration: none;
     }
 `
-
 const EditorialInformation = () => {
   return (
     <Section>
