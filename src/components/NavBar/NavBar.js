@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import useViewport from "../../hooks/useVIewport";
 import { Link, NavLink } from "react-router-dom";
+import eoltLogo from "../../assets/eolt_logo.png";
+import eoltLogoWhite from "../../assets/eolt_logo_white.png";
 
 const NavBar = (props) => {
   const [scrolled, setScrolled] = useState(false);
@@ -18,33 +20,43 @@ const NavBar = (props) => {
 
   const navClasses = scrolled ? styles.scrolled : "";
 
-  const { width } = useViewport();
-  const breakpoint = 475;
-  const content =
-    width < breakpoint ? <h1>EoLT</h1> : <h1>Encyclopedia of Ludic Terms</h1>;
+  const content = scrolled ? (
+    <img src={eoltLogoWhite} alt={"eoltLogoWhite"} />
+  ) : (
+    <img src={eoltLogo} alt={"eoltLogo"} />
+  );
 
   return (
     <header className={navClasses}>
-      <Link to="/"> {content} </Link>
+      <Link to="/"> {content}</Link>
       <nav>
         <div className={styles.buttonContainer}>
           <NavLink
-            to="about-us"
+            to="toc"
             className={(navData) =>
               navData.isActive ? styles.active : styles.btnLight
             }
           >
             {" "}
-            About us
+            Table of Contents
           </NavLink>
           <NavLink
-            to="support-us"
+            to="about"
             className={(navData) =>
               navData.isActive ? styles.active : styles.btnLight
             }
           >
             {" "}
-            Support
+            About
+          </NavLink>
+          <NavLink
+            to="contact"
+            className={(navData) =>
+              navData.isActive ? styles.active : styles.btnLight
+            }
+          >
+            {" "}
+            Contact
           </NavLink>
         </div>
       </nav>

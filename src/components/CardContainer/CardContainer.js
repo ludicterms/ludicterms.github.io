@@ -9,7 +9,7 @@ const CardContainer = (props) => {
       {!props.isLoading &&
         props.data.length > 0 &&
         props.data.map((item) => (
-          <Card key={item.fields.slug} data={item}></Card>
+          <Card isHome={props.isHome} key={item.fields.slug} data={item}></Card>
         ))}
       {/* {props.isLoading && props.httpError && <p>{props.httpError}</p>} */}
       {props.isLoading && <p>Loading...</p>}

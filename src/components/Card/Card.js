@@ -5,7 +5,12 @@ import styles from "./Card.module.css";
 const Card = (props) => {
   const key = props.data.fields.slug;
   return (
-    <Link className={styles.cardsWrapper} style={{textDecoration: "none"}} key={key} to={key}>
+    <Link
+      className={styles.cardsWrapper}
+      style={{ textDecoration: "none" }}
+      key={key}
+      to={`${props.isHome ? `contents/` : ''}${key}`}
+    >
       <div className={styles.card}>
         <h1>{props.data.fields.mainTitle}</h1>
         <p className={styles.preview}> {props.data.fields.abstract}</p>

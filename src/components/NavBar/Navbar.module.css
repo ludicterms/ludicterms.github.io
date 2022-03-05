@@ -11,9 +11,10 @@ header {
   top: 0;
   align-items: center;
   transition: all 0.3s ease-in;
-  background: var(--darkblue);
+  background: var(--light-grey);
   color: white;
   padding: 0 1rem 0 1rem;
+  z-index: 5;
 }
 
 
@@ -27,13 +28,17 @@ header a:hover, header a:active {
   color: white;
 }
 
+header img {
+  max-width: 150px;
+}
+
 .scrolled {
-  background: var(--dark-grey);
+  background: var(--darkgreen);
 }
 
 .buttonContainer {
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
   gap: 10px;
   justify-content: flex-end;
   align-content: center;
@@ -42,11 +47,11 @@ header a:hover, header a:active {
 nav a {
   text-align: center;
   align-self: center;
-  background: var(--light-grey);
-  color: var(--darkblue);
+  background: var(--darkgreen);
+  color: var(--light-grey);
   border-radius: 8px;
-  padding: 6px 4px;
-  width: 100px;
+  padding: 8px 10px;
+  width: max-content;
   height: 20px;
   border: 1px solid var(--light-grey);
   box-shadow: 0 2px 5px rgba(220, 220, 220, 220, 0.2);
@@ -57,7 +62,20 @@ nav a:hover,
 nav a:active,
 a.active {
   text-decoration: none;
-  background-color: var(--dark-grey);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
-  color: white;
+  background-color: var(--light-grey);
+  border: 1px solid var(--darkgreen);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  color: var(--darkgreen);
+}
+
+@media screen and (max-width: 468px) {
+  header  {
+    min-height: 15vh;
+  }
+  .buttonContainer {
+    gap: 5px;
+  }
+  header img {
+    max-width: 100px;
+  }
 }

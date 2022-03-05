@@ -31,7 +31,7 @@
    * ======================================================================== */
 
   /* brand colors */
-  --darkblue: #1a2b42;
+  --darkgreen: #006838;
   --teal: #4499bf;
   --teal-darken: color(var(--teal) l(45%) s(45%));
   --teal-lighten: color(var(--teal) l(95%) s(80%));

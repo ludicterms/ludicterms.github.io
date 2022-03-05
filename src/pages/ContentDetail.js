@@ -9,7 +9,7 @@ const ContentDetail = () => {
   const navigate = useNavigate();
   const [article, isLoading] = useSingleArticle(contentId);
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <p style={{textAlign: "center"}}>Loading...</p>;
 
   const handleBackClick = (e) => {
     e.preventDefault();
@@ -35,11 +35,12 @@ const ContentDetail = () => {
         https://plato.stanford.edu/entries/abduction/{" "}
       </p>
       <div className="pageTitle">
-        <h1>{article.mainTitle}</h1>
+        <h1 style={{marginBottom: "15px"}}>{article.mainTitle}</h1>
       </div>
+      <h4 style={{fontSize: "18px", marginBottom: "35px", marginTop: "0", fontWeight: "400"}}>{article.author}</h4>
       <h3 style={{ fontStyle: "italic", fontWeight: "normal" }}>
         {" "}
-        {article.subtitle}
+        {article.subtitle}                                                                                                                                                  
       </h3>
       <Markdown children={article.abstract} />
       <Markdown children={article.mainContent} />

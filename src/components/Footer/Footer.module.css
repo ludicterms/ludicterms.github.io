@@ -6,86 +6,72 @@ ul {
   padding-left: 0;
 }
 footer {
-  background-color: var(--dark-grey);
-  color: #bbb;
+  background-color: var(--light-grey);
+  
   line-height: 1.5;
 }
 footer a {
   text-decoration: none;
-  color: #eee;
+  color: var(--dark-grey);
 }
 a:hover {
   text-decoration: underline;
 }
 
 .ftTitle {
-  color: #fff;
+  color: var(--darkgreen);
   font-size: 24px;
   padding-bottom: 2px;
 }
 .ftMain {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-content: center;
 }
 .ftMainItem {
   padding: 5px;
   min-width: 12.5rem /*200px*/;
+  max-width: 500px;
 }
 
-@media only screen and (min-width: 477px) {
-  .ftMain {
-    justify-content: space-around;
-  }
+.eu img {
+  max-width: 200px;
+  margin-top: 10px;
 }
-@media only screen and (min-width: 1240px) {
-  .ftMain {
-    justify-content: space-evenly;
-  }
+.ftMainItem p {
+  color: var(--dark-grey);
+  line-height: 20px;
 }
 
-/* Sign-up form */
-form {
-    display: flex;
+.ftMainItem .eu {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+@media screen and (max-width: 468px) {
+  .ftMain {
+    justify-content: flex-start;
+    margin-left: 10%;
+  }
+
+  .ftMainItem .eu {
     flex-wrap: wrap;
-}
-input[type="email"] {
-    border: 0;
-    padding: 0.625rem;
-    margin-top: 0.3125rem;
-}
-input[type="submit"] {
-    background-color: #00d188;
-    color: #fff;
-    cursor: pointer;
-    border: 0;
-    padding: 0.625rem 0.9375rem;
-    margin-top: 0.3125rem;
-}
+    gap: 0;
+  }
 
-/* social section */
-
-.ftSocial {
-    padding: 5px;
-}
-.ftSocialList {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    border-top: 1px var(--medium-grey) solid; 
-    padding-top: 1.25rem;
-}
-.ftSocialList li {
-    margin: 10px;
-    font-size: 1.25rem;
+  .ftMainItem {
+    max-width: 300px;
+  }
 }
 
 /* legal section */
 
 .ftLegal {
     padding: 0.9375rem 1.875rem;
-    background-color: var(--darkblue);
+    background-color: var(--darkgreen);
+    color: #bbb;
 }
 .ftLegalList {
     width: 100%;
@@ -101,3 +87,6 @@ input[type="submit"] {
 .ftLegalList li:nth-last-child(2) {
     flex: 1;       /* same as flex-grow: 1; */
 }
+
+
+

@@ -7,32 +7,30 @@ import Contents from "./pages/Contents";
 import { Route, Routes } from "react-router-dom";
 import ContentDetail from "./pages/ContentDetail";
 import About from "./pages/About";
-import Support from "./pages/Support";
-import NotFound from "./pages/NotFound"
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
+import AuthorList from "./pages/AuthorList";
+import EditorialInformation from "./pages/EditorialInformation";
+import TableOfContents from "./pages/TableOfContents";
+import styles from "./App.module.css";
 
 const App = () => {
-
   return (
-    <div style={{ position: "relative" }}>
+    <div className={styles.layoutWrapper}>
       <NavBar />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Home />
-          }
-        />
-        <Route
-          path="/contents"
-          element={
-            <Contents />
-          }
-        />
-        <Route path="/contents/:contentId" element={<ContentDetail/>} />
-        <Route path="/about-us" element={<About />} />
-        <Route path="/support-us" element={<Support />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <div className={styles.layout}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contents" element={<Contents />} />
+          <Route path="/contents/:contentId" element={<ContentDetail />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/author-list" element={<AuthorList />} />
+          <Route path="/editorial" element ={<EditorialInformation />} />
+          <Route path="/toc" element ={<TableOfContents />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
       <Footer />
     </div>
   );

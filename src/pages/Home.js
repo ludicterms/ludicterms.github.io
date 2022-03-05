@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 import SearchBar from "../components/UI/SearchBar/SearchBar";
 import Info from "../components/Info/Info";
 import useSearchData from "../hooks/useSearchData";
@@ -7,6 +8,11 @@ import CardContainer from "../components/CardContainer/CardContainer";
 import { Link } from "react-router-dom";
 import { useArticles } from "../hooks/useArticles";
 import Button from "../components/UI/Button/Button";
+
+const Wrapper = styled.div`
+  margin-top: 100px;
+`
+
 
 const Home = () => {
   const [articles, isLoading] = useArticles();
@@ -19,11 +25,13 @@ const Home = () => {
   );
 
   const handleBlur = () => {
-    setIsActive(false);
+    setTimeout(() => {
+      setIsActive(false);
+    }, 500);
   };
 
   return (
-    <React.Fragment>
+    <Wrapper>
       <Section>
         <SearchBar
           searchTerm={searchTerm}
@@ -36,22 +44,23 @@ const Home = () => {
             isLoading={isLoading}
             /* httpError={props.httpError} */
             data={searchResults}
+            isHome={true}
           />
         )}
       </Section>
 
       {!isActive && (
         <React.Fragment>
-          <Button
+          {/* <Button
             path={"contents"}
             className="btnDark centered"
             style={{ width: "100px", height: "20px" }}
             buttonName={"Browse"}
-           />
+           /> */}
           <Info />
         </React.Fragment>
       )}
-    </React.Fragment>
+    </Wrapper>
   );
 };
 

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import styles from "./Footer.module.css"
+import styles from "./Footer.module.css";
+import euLogo from "../../assets/erc_eu_logo.jpg";
 
 const Footer = () => {
   return (
@@ -10,16 +11,16 @@ const Footer = () => {
           <h2 className={styles.ftTitle}>About</h2>
           <ul>
             <li>
-              <Link to="/">Editorial Information</Link>
+              <Link to="editorial">Editorial Information</Link>
             </li>
             <li>
-              <Link to="/">About EoLT</Link>
+              <Link to="about">About EoLT</Link>
             </li>
             <li>
               <Link to="/">How to Cite the EoLT</Link>
             </li>
             <li>
-              <Link to="/">Contact</Link>
+              <Link to="contact">Contact</Link>
             </li>
           </ul>
         </div>
@@ -27,13 +28,10 @@ const Footer = () => {
           <h2 className={styles.ftTitle}>Browse</h2>
           <ul>
             <li>
-              <Link to="/">Table of Contents</Link>
+              <Link to="toc">Table of Contents</Link>
             </li>
             <li>
-              <Link to="/">Archive</Link>
-            </li>
-            <li>
-              <Link to="/">List of Authors</Link>
+              <Link to="author-list">List of Authors</Link>
             </li>
             <li>
               <Link to="/">Log of Changes</Link>
@@ -41,72 +39,22 @@ const Footer = () => {
           </ul>
         </div>
         <div className={styles.ftMainItem}>
-          <h2 className={styles.ftTitle}>Support EoLT</h2>
-          <ul>
+          <h2 className={styles.ftTitle}>Funded by</h2>
+          <ul className={styles.eu}>
             <li>
-              <Link to="/support-us">How to support EoLT</Link>
+            <p>This research has received funding from the European Research Council
+          (ERC) under the European Union’s Horizon 2020 research and innovation
+          programme (Grant Agreement No [695528] – MSG: Making Sense of Games).</p>
+            </li>
+            <li>
+              <img src={euLogo} alt={"euLogo"} />
             </li>
           </ul>
         </div>
-       {/*  <div className={styles.ftMainItem}>
-          <h2 className={styles.ftTitle}>Stay Updated</h2>
-          <p>Subscribe to our newsletter to get our latest news.</p>
-          <form>
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter email address"
-            />
-            <input type="submit" value="Subscribe" />
-          </form>
-        </div> */}
       </section>
-
-      {/* <!-- Footer social --> */}
-      {/* <section className={styles.ftSocial}>
-        <ul className={styles.ftSocialList}>
-          <li>
-            <a href="/">
-              <i className="fab fa-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a href="/">
-              <i className="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a href="/">
-              <i className="fab fa-instagram"></i>
-            </a>
-          </li>
-          <li>
-            <a href="/">
-              <i className="fab fa-github"></i>
-            </a>
-          </li>
-          <li>
-            <a href="/">
-              <i className="fab fa-linkedin"></i>
-            </a>
-          </li>
-          <li>
-            <a href="/">
-              <i className="fab fa-youtube"></i>
-            </a>
-          </li>
-        </ul>
-      </section> */}
-
       {/* <!-- Footer legal --> */}
       <section className={styles.ftLegal}>
         <ul className={styles.ftLegalList}>
-         {/*  <li>
-            <a href="/">Terms &amp; Conditions</a>
-          </li>
-          <li>
-            <a href="/">Privacy Policy</a>
-          </li> */}
           <li>The Encyclopedia of Ludic Terms is Copyright &copy; 2021 by XXX</li>
         </ul>
       </section>

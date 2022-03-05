@@ -22,6 +22,7 @@ const Contents = () => {
         isLoading={isLoading}
         /* httpError={props.httpError} */
         data={searchResults}
+        isHome={false}
       />
     </Section>
   );
