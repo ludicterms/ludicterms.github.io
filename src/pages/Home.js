@@ -5,9 +5,7 @@ import Info from "../components/Info/Info";
 import useSearchData from "../hooks/useSearchData";
 import Section from "../components/UI/Section/Section";
 import CardContainer from "../components/CardContainer/CardContainer";
-import { Link } from "react-router-dom";
 import { useArticles } from "../hooks/useArticles";
-import Button from "../components/UI/Button/Button";
 
 const Wrapper = styled.div`
   margin-top: 100px;

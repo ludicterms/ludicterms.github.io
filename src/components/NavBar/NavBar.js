@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
-import useViewport from "../../hooks/useVIewport";
 import { Link, NavLink } from "react-router-dom";
 import eoltLogo from "../../assets/eolt_logo.png";
 import eoltLogoWhite from "../../assets/eolt_logo_white.png";
