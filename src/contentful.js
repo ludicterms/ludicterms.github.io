@@ -1,5 +1,3 @@
-//TODO: I think I need to move the process.env directly into the client because now there is the error that it can't read "accessToken":
-//checkout console log of https://sophiaauer.me/eolt/ to see the error
 
 const client = require("contentful").createClient({
   space: process.env.REACT_APP_CONTENFUL_SPACE_ID,
