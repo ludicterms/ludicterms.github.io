@@ -1,11 +1,10 @@
-
 const client = require("contentful").createClient({
   space: process.env.REACT_APP_CONTENFUL_SPACE_ID,
   accessToken: process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN,
 });
 
 const getArticles = () =>
-  client.getEntries().then((response) =>
+  client.getEntries({ content_type: "gameArticle" }).then((response) =>
     //sort the items in alphabatical order
     response.items.sort((a, b) => {
       if (a.fields.mainTitle < b.fields.mainTitle) {
@@ -26,4 +25,9 @@ const getSingleArticle = (slug) =>
     })
     .then((response) => response.items);
 
-export { getArticles, getSingleArticle };
+const getGeneralContent = () =>
+  client
+    .getEntries({ content_type: "generalContent" })
+    .then((response) => response.items);
+
+export { getArticles, getSingleArticle, getGeneralContent };

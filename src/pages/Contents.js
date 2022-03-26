@@ -10,6 +10,7 @@ import CardContainer from "../components/CardContainer/CardContainer";
 
 const Contents = () => {
   const [articles, isLoading] = useArticles();
+  console.log(articles);
   const { searchResults, searchTerm, handleChange } = useSearchData(
     articles,
     false
