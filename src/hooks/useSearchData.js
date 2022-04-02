@@ -22,7 +22,8 @@ const useSearchData = (data, isHome, setIsActive) => {
           return (
             //search for either character or actor/actress name
             value.fields.mainTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            value.fields.mainContent.toLowerCase().includes(searchTerm.toLowerCase())
+            value.fields.mainContent.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            value.fields.keywords.toLowerCase().includes(searchTerm.toLowerCase())
           );
         });
         //then the filtered list (results) is set on the searchResults state by using the setSearchResults method

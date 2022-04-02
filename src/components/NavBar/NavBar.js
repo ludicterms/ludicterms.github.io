@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
+import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
-import eoltLogo from "../../assets/eolt_logo.png";
-import eoltLogoWhite from "../../assets/eolt_logo_white.png";
+import eoltLogo from "../../assets/eolt_logo.svg";
+import eoltLogoWhite from "../../assets/eolt_logo_white.svg";
+
+const StyledImg = styled.img`
+  width: 150px;
+  height: 40px;
+  margin-left: 10px;
+`
 
 const NavBar = (props) => {
   const [scrolled, setScrolled] = useState(false);
@@ -15,14 +22,16 @@ const NavBar = (props) => {
     }
   };
 
-  window.addEventListener("scroll", handleScroll);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  }, [scrolled])
 
   const navClasses = scrolled ? styles.scrolled : "";
 
   const content = scrolled ? (
-    <img src={eoltLogoWhite} alt={"eoltLogoWhite"} />
+    <StyledImg src={eoltLogoWhite} alt={"eoltLogoWhite"} />
   ) : (
-    <img src={eoltLogo} alt={"eoltLogo"} />
+    <StyledImg src={eoltLogo} alt={"eoltLogo"} />
   );
 
   return (

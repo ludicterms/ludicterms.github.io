@@ -53,7 +53,7 @@ p {
 
 .btnDark {
   text-decoration: none;
-  background: var(--darkblue);
+  background: var(--darkgreen);
   font-size: 16px;
   text-align: center;
   display: flex;
@@ -61,7 +61,7 @@ p {
   color: var(--light-grey);
   border-radius: 8px;
   padding: 15px 20px;
-  border: 2px solid var(--darkblue);
+  border: 2px solid var(--darkgreen);
   cursor: pointer;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
   
@@ -71,8 +71,8 @@ p {
 .btnDark:active {
   text-decoration: none;
   background-color: var(--light-grey);
-  border-color: var(--darkblue);
-  color: var(--darkblue);
+  border-color: var(--darkgreen);
+  color: var(--darkgreen);
 }
 
 .btnLight {

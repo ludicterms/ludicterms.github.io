@@ -1,15 +1,19 @@
 import React from "react";
 import Section from "../UI/Section/Section";
+import Markdown from "react-markdown";
 import { ContentBox } from "../UI/ContentBox.styles";
+import { useGeneralContent } from "../../hooks/useGeneralContent"
 
 const Info = () => {
+  const [generalContent, isLoading] = useGeneralContent();
+
   return (
     <Section>
       <ContentBox>
-        <p>Some description about the project</p>
-        <p style={{ fontSize: "12px", fontStyle: "italic" }}>
-          Principal Editors and responsibly people of the page: Mike
-        </p>
+      {!isLoading && (
+        <Markdown children={generalContent[0].fields.projectDescription} />
+      )}
+      {isLoading && <p>Loading...</p>}
       </ContentBox>
     </Section>
   );
