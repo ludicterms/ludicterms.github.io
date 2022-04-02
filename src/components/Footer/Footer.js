@@ -8,7 +8,7 @@ const Footer = () => {
       {/* <!-- Footer main --> */}
       <section className={styles.ftMain}>
         <div className={styles.ftMainItem}>
-          <h2 className={styles.ftTitle}>About</h2>
+          <p className={styles.ftTitle}>About</p>
           <ul>
             <li>
               <Link to="editorial">Editorial Information</Link>
@@ -25,7 +25,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className={styles.ftMainItem}>
-          <h2 className={styles.ftTitle}>Browse</h2>
+          <p className={styles.ftTitle}>Browse</p>
           <ul>
             <li>
               <Link to="toc">Table of Contents</Link>
@@ -39,12 +39,15 @@ const Footer = () => {
           </ul>
         </div>
         <div className={styles.ftMainItem}>
-          <h2 className={styles.ftTitle}>Funded by</h2>
+          <p className={styles.ftTitle}>Funded by</p>
           <ul className={styles.eu}>
             <li>
-            <p>This research has received funding from the European Research Council
-          (ERC) under the European Union’s Horizon 2020 research and innovation
-          programme (Grant Agreement No [695528] – MSG: Making Sense of Games).</p>
+              <p>
+                This research has received funding from the European Research
+                Council (ERC) under the European Union’s Horizon 2020 research
+                and innovation programme (Grant Agreement No [695528] – MSG:
+                Making Sense of Games).
+              </p>
             </li>
             <li>
               <img src={euLogo} alt={"euLogo"} />
@@ -55,7 +58,9 @@ const Footer = () => {
       {/* <!-- Footer legal --> */}
       <section className={styles.ftLegal}>
         <ul className={styles.ftLegalList}>
-          <li>The Encyclopedia of Ludic Terms is Copyright &copy; 2021 by XXX</li>
+          <li>
+            The Encyclopedia of Ludic Terms is Copyright &copy; 2021 by XXX
+          </li>
         </ul>
       </section>
     </footer>

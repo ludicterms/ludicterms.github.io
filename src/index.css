@@ -12,9 +12,12 @@ body {
   flex-direction: column;
   overflow-wrap: break-word;
 }
-
-.pageTitle h1 {
-  font-size: 40px;
+.pageTitle {
+  margin-bottom: 40px;
+}
+.pageTitle p {
+  font-size: 48px;
+  font-weight: bold;
 }
 
 h1{
@@ -77,14 +80,14 @@ p {
 
 .btnLight {
   text-decoration: none;
-  background: var(--dark-grey);
+  background: var(--darkgreen);
   text-align: center;
   display: flex;
   justify-content: center;
   color: var(--light-grey);
   border-radius: 8px;
   padding: 12px 17px;
-  border: 2px solid var(--darkblue);
+  border: 2px solid var(--darkgreen);
   cursor: pointer;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
   

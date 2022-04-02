@@ -1,34 +1,22 @@
-import { useParams, useNavigate } from "react-router-dom";
+import React from "react";
 import styled from "styled-components";
+import { useParams, useNavigate } from "react-router-dom";
 import Section from "../components/UI/Section/Section";
 import { useSingleArticle } from "../hooks/useSingleArticle";
-import Markdown from "react-markdown";
-import remarkGfm from 'remark-gfm';
 import Button from "../components/UI/Button/Button";
+import Article from "../components/Article/Article";
+import TableOfContents from "../components/TableOfContents/TableOfContents";
 
-const StyledMarkdown = styled(Markdown)`
-  && {
-    table {
-  max-width: 100%;
+const StyledWrapper = styled.div`
+  position: relative;
+  height: max-content;
+  display: flex;
+
+  @media screen and (max-width: 900px) {
+  
+  display: block;
 }
-
-tr:nth-child(odd) {
-  background-color: #eee;
-}
-
-th {
-  background-color: #555;
-  color: #fff;
-}
-
-th,
-td {
-  text-align: left;
-  padding: 0.5em 1em;
-}
-  }
-`;
-
+`
 
 const ContentDetail = () => {
   const { contentId } = useParams();
@@ -44,44 +32,23 @@ const ContentDetail = () => {
   };
 
   //TODO: split up below content into components since this is a page so it should be stateless and only calling components!
-
+  document.getElementById("root");
   return (
-    <Section>
-      <Button
-        className={"btnLight leftAligned"}
-        style={{ width: "70px", height: "15px" }}
-        onClick={handleBackClick}
-        buttonName={"Go Back"}
-        path={""}
-      ></Button>
-      <div className="pageTitle">
-        <h1 style={{ marginBottom: "15px" }}>{article.mainTitle}</h1>
+    <StyledWrapper>
+      <Section>
+      <div>
+        <Button
+          className={"btnLight leftAligned"}
+          style={{ width: "70px", height: "15px" }}
+          onClick={handleBackClick}
+          buttonName={"Go Back"}
+          path={""}
+        ></Button>
+        <Article article={article} />
       </div>
-      <h4
-        style={{
-          fontSize: "18px",
-          marginBottom: "35px",
-          marginTop: "0",
-          fontWeight: "400",
-        }}
-      >
-        {article.author}
-      </h4>
-      <h3 style={{ fontStyle: "italic", fontWeight: "normal" }}>
-        {" "}
-        {article.subtitle}
-      </h3>
-      <Markdown children={article.abstract} />
-      <StyledMarkdown remarkPlugins={[remarkGfm]} children={article.mainContent}  />
-      <h1>Bibliography </h1>
-      <Markdown children={article.bibliography} />
-      {article.authorInfo && (
-        <>
-          <h1> Author </h1>
-          <Markdown children={article.authorInfo} />
-        </>
-      )}
     </Section>
+    <TableOfContents />
+    </StyledWrapper>
   );
 };
 
