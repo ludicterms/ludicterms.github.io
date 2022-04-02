@@ -60,10 +60,15 @@ const Article = ({ article }) => {
         children={article.mainContent}
         id={"mainContent"}
       />
-      <h1 id={`bibliography-${article.mainTitle}`}>Bibliography </h1>
-      <Markdown children={article.bibliography} rehypePlugins={[rehypeSlug]}/>
+      <h1
+        id={`bibliography-${article.mainTitle}`}
+        style={{ scrollMarginTop: "120px" }}
+      >
+        Bibliography{" "}
+      </h1>
+      <Markdown children={article.bibliography} rehypePlugins={[rehypeSlug]} />
       {article.authorInfo && (
-          <Markdown children={article.authorInfo} rehypePlugins={[rehypeSlug]}/>
+        <Markdown children={article.authorInfo} rehypePlugins={[rehypeSlug]} />
       )}
     </React.Fragment>
   );
