@@ -18,7 +18,7 @@ const StyledNav = styled.div`
   right: 16px;
   overflow: auto;
   max-height: calc(100vh - 70px);
-  background-color: #ebebeb;
+  background-color: #f8f7f8;
   border-radius: 12px;
 
   @media screen and (max-width: 900px) {
@@ -49,6 +49,7 @@ const StyledNav = styled.div`
 
   li.active > a {
     color: #767676;
+    text-decoration: underline;
   }
 `;
 

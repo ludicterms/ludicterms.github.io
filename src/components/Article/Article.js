@@ -61,12 +61,9 @@ const Article = ({ article }) => {
         id={"mainContent"}
       />
       <h1 id={`bibliography-${article.mainTitle}`}>Bibliography </h1>
-      <Markdown children={article.bibliography}/>
+      <Markdown children={article.bibliography} rehypePlugins={[rehypeSlug]}/>
       {article.authorInfo && (
-        <>
-          <h1 id={`author-${article.mainTitle}`}> Author </h1>
-          <Markdown children={article.authorInfo} />
-        </>
+          <Markdown children={article.authorInfo} rehypePlugins={[rehypeSlug]}/>
       )}
     </React.Fragment>
   );
