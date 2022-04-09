@@ -9,10 +9,14 @@ export const useGeneralContent = () => {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    promise.then((generalContent) => {
-      setGeneralContent(generalContent);
-      setLoading(false);
-    });
+    promise
+      .then((generalContent) => {
+        setGeneralContent(generalContent);
+        setLoading(false);
+      })
+      .catch((err) => {
+        alert(err);
+      });
   }, []);
 
   return [generalContent, isLoading];
