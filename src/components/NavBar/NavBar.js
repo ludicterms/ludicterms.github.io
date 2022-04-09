@@ -9,7 +9,23 @@ const StyledImg = styled.img`
   width: 180px;
   height: 50px;
   margin-left: 10px;
-`
+`;
+
+const TabletUpOnly = styled.span`
+  display: block;
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+`;
+
+const MobileOnly = styled.span`
+  display: none;
+
+  @media screen and (max-width: 900px) {
+    display: block;
+  }
+`;
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -24,7 +40,7 @@ const NavBar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-  }, [scrolled])
+  }, [scrolled]);
 
   const navClasses = scrolled ? styles.scrolled : "";
 
@@ -45,7 +61,8 @@ const NavBar = () => {
               navData.isActive ? styles.active : styles.btnLight
             }
           >
-            Table of Contents
+            <TabletUpOnly>Table of Contents</TabletUpOnly>
+            <MobileOnly>ToC</MobileOnly>
           </NavLink>
           <NavLink
             to="about"
