@@ -1,24 +1,20 @@
+import React from "react";
 import Section from "../components/UI/Section/Section";
 import styled from "styled-components";
 import Markdown from "react-markdown";
-import { Link } from "react-router-dom";
 import { useGeneralContent } from "../hooks/useGeneralContent";
 
 const StyledList = styled.ul`
   line-height: 35px;
 `;
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: black;
-  :hover {
-    color: #006838;
-    text-decoration: none;
-  }
-`;
-
 const EditorialInformation = () => {
   const [generalContent, isLoading] = useGeneralContent();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Section>
       <div className="pageTitle">
@@ -35,8 +31,6 @@ const EditorialInformation = () => {
         )}
         {isLoading && <p>Loading...</p>}
       </StyledList>
-      <h2>EoLT Authors</h2>
-      <StyledLink to="../author-list">List of Authors</StyledLink>
     </Section>
   );
 };
