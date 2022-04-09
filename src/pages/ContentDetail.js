@@ -6,6 +6,7 @@ import { useSingleArticle } from "../hooks/useSingleArticle";
 import Button from "../components/UI/Button/Button";
 import Article from "../components/Article/Article";
 import TableOfContents from "../components/TableOfContents/TableOfContents";
+import useViewport from "../hooks/useVIewport"
 
 const StyledWrapper = styled.div`
   position: relative;
@@ -23,9 +24,12 @@ const ContentDetail = () => {
   const navigate = useNavigate();
   const [article, isLoading] = useSingleArticle(contentId);
 
+  const { width } = useViewport();
+  const breakpoint = 475;
+
   React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    if (width > breakpoint) window.scrollTo(0, 0);
+  }, [width]);
 
   if (isLoading) return <p style={{ textAlign: "center" }}>Loading...</p>;
 

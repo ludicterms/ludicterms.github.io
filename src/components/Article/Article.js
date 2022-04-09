@@ -39,7 +39,7 @@ const Article = ({ article }) => {
   return (
     <React.Fragment>
       <div className="pageTitle">
-        <p style={{ marginBottom: "15px" }}>{article.mainTitle}</p>
+        <p style={{ marginBottom: "15px", lineHeight: "50px" }}>{article.mainTitle}</p>
       </div>
       <h4
         style={{
