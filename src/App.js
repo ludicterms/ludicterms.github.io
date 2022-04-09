@@ -12,6 +12,8 @@ import NotFound from "./pages/NotFound";
 import AuthorList from "./pages/AuthorList";
 import EditorialInformation from "./pages/EditorialInformation";
 import TableOfContents from "./pages/TableOfContents";
+import HowToCite from "./pages/HowToCite";
+import RecentArticles from "./pages/RecentArticles";
 import styles from "./App.module.css";
 
 const App = () => {
@@ -28,6 +30,8 @@ const App = () => {
           <Route path="/author-list" element={<AuthorList />} />
           <Route path="/editorial" element ={<EditorialInformation />} />
           <Route path="/toc" element ={<TableOfContents />} />
+          <Route path="/how-to-cite" element ={<HowToCite />} />
+          <Route path="/recent-articles" element ={<RecentArticles />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

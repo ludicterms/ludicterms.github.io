@@ -17,7 +17,7 @@ const Footer = () => {
               <Link to="about">About EoLT</Link>
             </li>
             <li>
-              <Link to="/">How to Cite the EoLT</Link>
+              <Link to="how-to-cite">How to Cite the EoLT</Link>
             </li>
             <li>
               <Link to="contact">Contact</Link>
@@ -34,7 +34,7 @@ const Footer = () => {
               <Link to="author-list">List of Authors</Link>
             </li>
             <li>
-              <Link to="/">Log of Changes</Link>
+              <Link to="recent-articles">Recent Articles</Link>
             </li>
           </ul>
         </div>
