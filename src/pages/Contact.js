@@ -1,3 +1,4 @@
+import React from "react";
 import Section from "../components/UI/Section/Section";
 import Markdown from "react-markdown";
 import styled from "styled-components";
@@ -11,6 +12,11 @@ const StyledContentBox = styled(ContentBox)`
 
 const Contact = () => {
   const [generalContent, isLoading] = useGeneralContent();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Section>
       <div className="pageTitle">

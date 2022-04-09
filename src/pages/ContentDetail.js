@@ -23,6 +23,10 @@ const ContentDetail = () => {
   const navigate = useNavigate();
   const [article, isLoading] = useSingleArticle(contentId);
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   if (isLoading) return <p style={{ textAlign: "center" }}>Loading...</p>;
 
   const handleBackClick = (e) => {
@@ -30,9 +34,9 @@ const ContentDetail = () => {
 
     navigate(-1);
   };
-
-  //TODO: split up below content into components since this is a page so it should be stateless and only calling components!
+  
   document.getElementById("root");
+  
   return (
     <StyledWrapper>
       <Section>
@@ -44,7 +48,7 @@ const ContentDetail = () => {
           buttonName={"Go Back"}
           path={""}
         ></Button>
-        <Article article={article} />
+        {!isLoading && <Article article={article} />}
       </div>
     </Section>
     <TableOfContents />

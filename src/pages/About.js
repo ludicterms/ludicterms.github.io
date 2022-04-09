@@ -17,6 +17,11 @@ const StyledMarkdown = styled(Markdown)`
 
 const About = () => {
   const [generalContent, isLoading] = useGeneralContent();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
+  
   return (
     <Section>
       <div className="pageTitle">

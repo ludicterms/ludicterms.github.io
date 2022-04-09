@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import Section from "../components/UI/Section/Section";
 import { useArticles } from "../hooks/useArticles";
@@ -10,27 +11,40 @@ const StyledLink = styled(Link)`
   color: black;
   :hover {
     color: #006838;
-    text-decoration: none;
+    text-decoration: underline;
   }
   li {
-    list-style: none; 
+    list-style: none;
   }
 `;
 
 const TableOfContents = () => {
   const [articles, loading] = useArticles();
+  const sortedArticles = articles.sort((a, b) => {
+    if (a.fields.mainTitle < b.fields.mainTitle) {
+      return -1;
+    }
+    if (a.fields.mainTitle > b.fields.mainTitle) {
+      return 1;
+    }
+    return 0;
+  });
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Section>
       <div className="pageTitle">
         <h1>Table of Contents</h1>
       </div>
-      <div>
+      <div style={{ width: "max-content" }}>
         {!loading &&
-          articles.length > 0 &&
-          articles.map((item) => (
+          sortedArticles.length > 0 &&
+          sortedArticles.map((item) => (
             <StyledLink to={`../contents/${item.fields.slug}`}>
-              <li>{item.fields.mainTitle}</li>
+              <li key={item.fields.slug}>{item.fields.mainTitle}</li>
             </StyledLink>
           ))}
       </div>
