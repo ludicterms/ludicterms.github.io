@@ -3,6 +3,7 @@ import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import styled from "styled-components";
 import Markdown from "react-markdown";
+import { useGeneralContent } from "../../hooks/useGeneralContent";
 
 const StyledMarkdown = styled(Markdown)`
   && {
@@ -34,6 +35,7 @@ const StyledMarkdown = styled(Markdown)`
 `;
 
 const Article = ({ article }) => {
+  const [generalContent, isLoading] = useGeneralContent();
   return (
     <React.Fragment>
       <div className="pageTitle">
@@ -61,15 +63,22 @@ const Article = ({ article }) => {
         id={"mainContent"}
       />
       <h1
-        id={`bibliography-${article.mainTitle}`}
+        id={`bibliography-${article.slug}`}
         style={{ scrollMarginTop: "120px" }}
       >
-        Bibliography{" "}
+        Bibliography
       </h1>
       <Markdown children={article.bibliography} rehypePlugins={[rehypeSlug]} />
       {article.authorInfo && (
         <Markdown children={article.authorInfo} rehypePlugins={[rehypeSlug]} />
       )}
+      <h1 id={`copyright-${article.slug}`} style={{ scrollMarginTop: "120px" }}>
+        Copyright
+      </h1>
+      {!isLoading && (
+        <StyledMarkdown children={generalContent[0].fields.copyright} />
+      )}
+      {isLoading && <p>Loading...</p>}
     </React.Fragment>
   );
 };
