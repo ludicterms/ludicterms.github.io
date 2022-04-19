@@ -9,6 +9,7 @@ const StyledMarkdown = styled(Markdown)`
   && {
     li {
       line-height: 2;
+      scroll-margin-top: 120px;
     }
     h1 {
       scroll-margin-top: 120px;
