@@ -11,10 +11,10 @@ const Footer = () => {
           <p className={styles.ftTitle}>About</p>
           <ul>
             <li>
-              <Link to="editorial">Editorial Information</Link>
+              <Link to="editorial-information">Editorial Information</Link>
             </li>
             <li>
-              <Link to="about">About EoLT</Link>
+              <Link to="about">About the EoLT</Link>
             </li>
             <li>
               <Link to="how-to-cite">How to Cite the EoLT</Link>
@@ -59,7 +59,12 @@ const Footer = () => {
       <section className={styles.ftLegal}>
         <ul className={styles.ftLegalList}>
           <li>
-            The Encyclopedia of Ludic Terms is Copyright &copy; 2021 by XXX
+            &copy; 2022 Encyclopedia of Ludic Terms. All Rights Reserved.
+            Developed by{" "}
+            <a href="https://sophiaauer.me/" rel="noreferrer" target="_blank" style={{textDecoration: "none", color: "#bbb"}}>
+              Sophia Auer
+            </a>
+            .
           </li>
         </ul>
       </section>

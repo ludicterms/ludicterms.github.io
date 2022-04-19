@@ -1,7 +1,7 @@
 @import "../UI/StyleVariables.css";
 
 /* main section overall */
-ul {
+.ftMainItem ul, .ftLegal ul {
   list-style: none;
   padding-left: 0;
 }
@@ -14,7 +14,7 @@ footer a {
   text-decoration: none;
   color: var(--dark-grey);
 }
-a:hover {
+footer a:hover {
   text-decoration: underline;
 }
 
@@ -52,6 +52,10 @@ a:hover {
   gap: 50px;
 }
 
+.ftMainItem .eu p {
+  margin-top: 0;
+}
+
 @media screen and (max-width: 468px) {
   .ftMain {
     justify-content: flex-start;
@@ -78,7 +82,7 @@ a:hover {
 .ftLegalList {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     justify-content: center;
 }
 .ftLegalList li {
