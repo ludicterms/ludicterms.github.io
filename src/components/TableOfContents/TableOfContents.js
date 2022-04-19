@@ -1,29 +1,34 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import useHeadingsData from "../../hooks/useHeadingsData";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import Headings from "./Headings";
 
 const StyledNav = styled.div`
+  ${(props) =>
+    !props.isMobile &&
+    css`
+      position: sticky;
+      z-index: 2;
+      top: 35%;
+      right: 16px;
+      overflow: auto;
+      width: 300px;
+      min-width: 200px;
+    `}
   align-self: flex-start;
-  width: 300px;
-  min-width: 200px;
+
   padding: 16px;
   margin: 8px;
-  position: sticky;
-  z-index: 2;
   display: flex;
   flex-flow: column;
-  top: 35%;
-  right: 16px;
-  overflow: auto;
   max-height: calc(100vh - 70px);
   background-color: #f8f7f8;
   border-radius: 12px;
 
-  @media screen and (max-width: 900px) {
+  /* @media screen and (max-width: 900px) {
     display: none;
-  }
+  } */
 
   ul {
     line-height: 1.8;
@@ -33,7 +38,6 @@ const StyledNav = styled.div`
       justify-content: flex-start;
       text-align: left;
       ul {
-        margin-left: 15px;
         li {
           display: flex;
           flex-direction: column;
@@ -53,12 +57,12 @@ const StyledNav = styled.div`
   }
 `;
 
-const TableOfContents = () => {
+const TableOfContents = (props) => {
   const [activeId, setActiveId] = React.useState();
   const { nestedHeadings } = useHeadingsData();
   useIntersectionObserver(setActiveId);
   return (
-    <StyledNav aria-label="Table of contents">
+    <StyledNav aria-label="Table of contents" isMobile={props.isMobile}>
       <Headings headings={nestedHeadings} activeId={activeId} />
     </StyledNav>
   );

@@ -3,6 +3,7 @@ import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import styled from "styled-components";
 import Markdown from "react-markdown";
+import TableOfContents from "../TableOfContents/TableOfContents";
 import { useGeneralContent } from "../../hooks/useGeneralContent";
 
 const StyledMarkdown = styled(Markdown)`
@@ -48,6 +49,14 @@ const StyledMarkdown = styled(Markdown)`
   }
 `;
 
+const MobileOnly = styled.span`
+  display: none;
+
+  @media screen and (max-width: 900px) {
+    display: block;
+  }
+`;
+
 const Article = ({ article }) => {
   const [generalContent, isLoading] = useGeneralContent();
   return (
@@ -71,6 +80,9 @@ const Article = ({ article }) => {
         {article.subtitle}
       </h3>
       <Markdown children={article.abstract} />
+      <MobileOnly>
+        <TableOfContents isMobile={true}/>
+      </MobileOnly>
       <StyledMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeSlug]}
