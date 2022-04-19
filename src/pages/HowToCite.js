@@ -13,7 +13,7 @@ const HowToCite = () => {
   return (
     <Section>
       <div className="pageTitle">
-        <h1>How To Cite</h1>
+        <h1>How to Cite</h1>
       </div>
       {!isLoading && <Markdown children={generalContent[0].fields.howToCite} />}
       {isLoading && <p>Loading...</p>}

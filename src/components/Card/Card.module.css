@@ -31,7 +31,7 @@
 }
 
 .preview {
-  line-height: 20px;
+  line-height: 2;
   display: -webkit-box;
   overflow: hidden;
   -webkit-line-clamp: 3;

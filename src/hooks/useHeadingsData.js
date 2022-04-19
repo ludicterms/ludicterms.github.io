@@ -28,7 +28,6 @@ const useHeadingsData = () => {
       );
   
       const newNestedHeadings = getNestedHeadings(headingElements);
-      console.log("elephants: " + newNestedHeadings)
       setNestedHeadings(newNestedHeadings);
     }, []);
   

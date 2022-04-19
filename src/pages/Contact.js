@@ -20,7 +20,7 @@ const Contact = () => {
   return (
     <Section>
       <div className="pageTitle">
-        <h1>Get in touch</h1>
+        <h1>Contact Information</h1>
       </div>
       <div>
         <StyledContentBox>

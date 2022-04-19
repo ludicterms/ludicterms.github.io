@@ -6,8 +6,8 @@ import eoltLogo from "../../assets/eolt_logo.svg";
 import eoltLogoWhite from "../../assets/eolt_logo_white.svg";
 
 const StyledImg = styled.img`
-  width: 180px;
-  height: 50px;
+  width: 200px;
+  height: 60px;
   margin-left: 10px;
 `;
 

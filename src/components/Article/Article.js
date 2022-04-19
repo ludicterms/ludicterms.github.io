@@ -7,6 +7,9 @@ import { useGeneralContent } from "../../hooks/useGeneralContent";
 
 const StyledMarkdown = styled(Markdown)`
   && {
+    li {
+      line-height: 2;
+    }
     h1 {
       scroll-margin-top: 120px;
     }
@@ -31,6 +34,16 @@ const StyledMarkdown = styled(Markdown)`
       text-align: left;
       padding: 0.5em 1em;
     }
+
+    img {
+      width: 60%;
+    }
+
+    @media screen and (max-width: 900px) {
+      img {
+        width: 100%;
+      }
+    }
   }
 `;
 
@@ -39,7 +52,9 @@ const Article = ({ article }) => {
   return (
     <React.Fragment>
       <div className="pageTitle">
-        <p style={{ marginBottom: "15px", lineHeight: "50px" }}>{article.mainTitle}</p>
+        <p style={{ marginBottom: "15px", lineHeight: "50px" }}>
+          {article.mainTitle}
+        </p>
       </div>
       <h4
         style={{
@@ -52,7 +67,6 @@ const Article = ({ article }) => {
         {article.author}
       </h4>
       <h3 style={{ fontStyle: "italic", fontWeight: "normal" }}>
-        {" "}
         {article.subtitle}
       </h3>
       <Markdown children={article.abstract} />
