@@ -24,12 +24,13 @@ const ContentDetail = () => {
   const navigate = useNavigate();
   const [article, isLoading] = useSingleArticle(contentId);
 
-  const { width } = useViewport();
+  const { width, setWidth } = useViewport();
   const breakpoint = 475;
 
   React.useEffect(() => {
     if (width > breakpoint) window.scrollTo(0, 0);
-  }, [width]);
+    return () => setWidth(null);
+  }, [width, setWidth]);
 
   if (isLoading) return <p style={{ textAlign: "center" }}>Loading...</p>;
 
