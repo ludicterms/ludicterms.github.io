@@ -23,12 +23,12 @@ const App = () => {
       <div className={styles.layout}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/contents" element={<Contents />} />
-          <Route path="/contents/:contentId" element={<ContentDetail />} />
+          <Route path="/articles" element={<Contents />} />
+          <Route path="/articles/:contentId" element={<ContentDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/author-list" element={<AuthorList />} />
-          <Route path="/editorial" element ={<EditorialInformation />} />
+          <Route path="/editorial-information" element ={<EditorialInformation />} />
           <Route path="/toc" element ={<TableOfContents />} />
           <Route path="/how-to-cite" element ={<HowToCite />} />
           <Route path="/recent-articles" element ={<RecentArticles />} />

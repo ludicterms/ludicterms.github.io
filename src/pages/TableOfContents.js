@@ -43,7 +43,7 @@ const TableOfContents = () => {
         {!loading &&
           sortedArticles.length > 0 &&
           sortedArticles.map((item) => (
-            <StyledLink to={`../contents/${item.fields.slug}`}>
+            <StyledLink to={`../articles/${item.fields.slug}`}>
               <li key={item.fields.slug}>{item.fields.mainTitle}</li>
             </StyledLink>
           ))}

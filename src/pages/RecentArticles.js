@@ -47,7 +47,7 @@ const RecentArticles = () => {
         {!loading &&
           sortedCreatedBy.length > 0 &&
           sortedCreatedBy.slice(0, 5).map((item) => (
-            <StyledLink to={`../contents/${item.fields.slug}`}>
+            <StyledLink to={`../articles/${item.fields.slug}`}>
               <li key={item.fields.slug}>{item.fields.mainTitle}</li>
             </StyledLink>
           ))}

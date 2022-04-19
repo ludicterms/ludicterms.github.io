@@ -9,7 +9,7 @@ const Card = (props) => {
       className={styles.cardsWrapper}
       style={{ textDecoration: "none" }}
       key={key}
-      to={`${props.isHome ? `contents/` : ''}${key}`}
+      to={`${props.isHome ? `articles/` : ''}${key}`}
     >
       <div className={styles.card}>
         <h1>{props.data.fields.mainTitle}</h1>
