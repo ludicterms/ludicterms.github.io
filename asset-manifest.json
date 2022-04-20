@@ -1,29 +1,25 @@
 {
   "files": {
     "main.css": "/static/css/main.b404399f.chunk.css",
-    "main.js": "/static/js/main.03201b17.chunk.js",
-    "main.js.map": "/static/js/main.03201b17.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.7e47a6d4.js",
-    "runtime-main.js.map": "/static/js/runtime-main.7e47a6d4.js.map",
-    "static/js/2.06585828.chunk.js": "/static/js/2.06585828.chunk.js",
-    "static/js/2.06585828.chunk.js.map": "/static/js/2.06585828.chunk.js.map",
-    "static/js/3.3d8fbe25.chunk.js": "/static/js/3.3d8fbe25.chunk.js",
-    "static/js/3.3d8fbe25.chunk.js.map": "/static/js/3.3d8fbe25.chunk.js.map",
-    "static/js/4.26e9ae63.chunk.js": "/static/js/4.26e9ae63.chunk.js",
-    "static/js/4.26e9ae63.chunk.js.map": "/static/js/4.26e9ae63.chunk.js.map",
-    "static/js/5.91adc970.chunk.js": "/static/js/5.91adc970.chunk.js",
-    "static/js/5.91adc970.chunk.js.map": "/static/js/5.91adc970.chunk.js.map",
+    "main.js": "/static/js/main.57a643ab.chunk.js",
+    "main.js.map": "/static/js/main.57a643ab.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ebd79ce0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ebd79ce0.js.map",
+    "static/js/2.76197baa.chunk.js": "/static/js/2.76197baa.chunk.js",
+    "static/js/2.76197baa.chunk.js.map": "/static/js/2.76197baa.chunk.js.map",
+    "static/js/3.0afd6ddb.chunk.js": "/static/js/3.0afd6ddb.chunk.js",
+    "static/js/3.0afd6ddb.chunk.js.map": "/static/js/3.0afd6ddb.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.b404399f.chunk.css.map": "/static/css/main.b404399f.chunk.css.map",
-    "static/js/2.06585828.chunk.js.LICENSE.txt": "/static/js/2.06585828.chunk.js.LICENSE.txt",
+    "static/js/2.76197baa.chunk.js.LICENSE.txt": "/static/js/2.76197baa.chunk.js.LICENSE.txt",
     "static/media/eolt_logo.69abea68.svg": "/static/media/eolt_logo.69abea68.svg",
     "static/media/eolt_logo_white.5142cef3.svg": "/static/media/eolt_logo_white.5142cef3.svg",
     "static/media/erc_eu_logo.22d24860.jpg": "/static/media/erc_eu_logo.22d24860.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.7e47a6d4.js",
-    "static/js/2.06585828.chunk.js",
+    "static/js/runtime-main.ebd79ce0.js",
+    "static/js/2.76197baa.chunk.js",
     "static/css/main.b404399f.chunk.css",
-    "static/js/main.03201b17.chunk.js"
+    "static/js/main.57a643ab.chunk.js"
   ]
 }
