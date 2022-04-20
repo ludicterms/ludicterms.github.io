@@ -32,26 +32,120 @@ const App = () => {
     <div className={styles.layoutWrapper}>
       <NavBar />
       <div className={styles.layout}>
-        <Suspense fallback={<p style={{ textAlign: "center" }}>Loading...</p>}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/articles" element={<Contents />} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Suspense
+                fallback={<p style={{ textAlign: "center" }}>Loading...</p>}
+              >
+                <Home />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/articles"
+            element={
+              <Suspense
+                fallback={<p style={{ textAlign: "center" }}>Loading...</p>}
+              >
+                <Contents />
+              </Suspense>
+            }
+          />
 
-            <Route path="/articles/:contentId" element={<ContentDetail />} />
+          <Route
+            path="/articles/:contentId"
+            element={
+              <Suspense
+                fallback={<p style={{ textAlign: "center" }}>Loading...</p>}
+              >
+                <ContentDetail />{" "}
+              </Suspense>
+            }
+          />
 
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/author-list" element={<AuthorList />} />
-            <Route
-              path="/editorial-information"
-              element={<EditorialInformation />}
-            />
-            <Route path="/toc" element={<TableOfContents />} />
-            <Route path="/how-to-cite" element={<HowToCite />} />
-            <Route path="/recent-articles" element={<RecentArticles />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
+          <Route
+            path="/about"
+            element={
+              <Suspense
+                fallback={<p style={{ textAlign: "center" }}>Loading...</p>}
+              >
+                <About />{" "}
+              </Suspense>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <Suspense
+                fallback={<p style={{ textAlign: "center" }}>Loading...</p>}
+              >
+                <Contact />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/author-list"
+            element={
+              <Suspense
+                fallback={<p style={{ textAlign: "center" }}>Loading...</p>}
+              >
+                <AuthorList />{" "}
+              </Suspense>
+            }
+          />
+          <Route
+            path="/editorial-information"
+            element={
+              <Suspense
+                fallback={<p style={{ textAlign: "center" }}>Loading...</p>}
+              >
+                <EditorialInformation />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/toc"
+            element={
+              <Suspense
+                fallback={<p style={{ textAlign: "center" }}>Loading...</p>}
+              >
+                <TableOfContents />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/how-to-cite"
+            element={
+              <Suspense
+                fallback={<p style={{ textAlign: "center" }}>Loading...</p>}
+              >
+                <HowToCite />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/recent-articles"
+            element={
+              <Suspense
+                fallback={<p style={{ textAlign: "center" }}>Loading...</p>}
+              >
+                <RecentArticles />
+              </Suspense>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <Suspense
+                fallback={<p style={{ textAlign: "center" }}>Loading...</p>}
+              >
+                <NotFound />
+              </Suspense>
+            }
+          />
+        </Routes>
       </div>
       <Footer />
     </div>
