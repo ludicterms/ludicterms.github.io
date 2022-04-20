@@ -6,18 +6,17 @@ import { useSingleArticle } from "../hooks/useSingleArticle";
 import Button from "../components/UI/Button/Button";
 import Article from "../components/Article/Article";
 import TableOfContents from "../components/TableOfContents/TableOfContents";
-import useViewport from "../hooks/useVIewport"
-
+/* import useViewport from "../hooks/useVIewport"
+ */
 const StyledWrapper = styled.div`
   position: relative;
   height: max-content;
   display: flex;
 
   @media screen and (max-width: 900px) {
-  
-  display: block;
-}
-`
+    display: block;
+  }
+`;
 
 const ContentDetail = () => {
   const { contentId } = useParams();
@@ -39,24 +38,24 @@ const ContentDetail = () => {
 
     navigate(-1);
   };
-  
+
   document.getElementById("root");
-  
+
   return (
     <StyledWrapper>
       <Section>
-      <div>
-        <Button
-          className={"btnLight leftAligned"}
-          style={{ width: "70px", height: "15px" }}
-          onClick={handleBackClick}
-          buttonName={"Go Back"}
-          path={""}
-        ></Button>
-        {!isLoading && <Article article={article} />}
-      </div>
-    </Section>
-    <TableOfContents />
+        <div>
+          <Button
+            className={"btnLight leftAligned"}
+            style={{ width: "70px", height: "15px" }}
+            onClick={handleBackClick}
+            buttonName={"Go Back"}
+            path={""}
+          ></Button>
+          {!isLoading && <Article article={article} />}
+        </div>
+      </Section>
+      <TableOfContents />
     </StyledWrapper>
   );
 };
