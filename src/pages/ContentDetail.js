@@ -1,12 +1,14 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import styled from "styled-components";
 import { useParams, useNavigate } from "react-router-dom";
 import Section from "../components/UI/Section/Section";
 import { useSingleArticle } from "../hooks/useSingleArticle";
 import Button from "../components/UI/Button/Button";
-import Article from "../components/Article/Article";
+/* import Article from "../components/Article/Article"; */
 import TableOfContents from "../components/TableOfContents/TableOfContents";
-import useViewport from "../hooks/useVIewport"
+import useViewport from "../hooks/useVIewport";
+
+const Article = lazy(() => import("../components/Article/Article"));
 
 const StyledWrapper = styled.div`
   position: relative;
@@ -14,10 +16,9 @@ const StyledWrapper = styled.div`
   display: flex;
 
   @media screen and (max-width: 900px) {
-  
-  display: block;
-}
-`
+    display: block;
+  }
+`;
 
 const ContentDetail = () => {
   const { contentId } = useParams();
@@ -39,24 +40,26 @@ const ContentDetail = () => {
 
     navigate(-1);
   };
-  
+
   document.getElementById("root");
-  
+
   return (
     <StyledWrapper>
       <Section>
-      <div>
-        <Button
-          className={"btnLight leftAligned"}
-          style={{ width: "70px", height: "15px" }}
-          onClick={handleBackClick}
-          buttonName={"Go Back"}
-          path={""}
-        ></Button>
-        {!isLoading && <Article article={article} />}
-      </div>
-    </Section>
-    <TableOfContents />
+        <div>
+          <Button
+            className={"btnLight leftAligned"}
+            style={{ width: "70px", height: "15px" }}
+            onClick={handleBackClick}
+            buttonName={"Go Back"}
+            path={""}
+          ></Button>
+          <Suspense fallback={<p>Loading...</p>}>
+            {!isLoading && <Article article={article} />}
+          </Suspense>
+        </div>
+      </Section>
+      <TableOfContents />
     </StyledWrapper>
   );
 };
