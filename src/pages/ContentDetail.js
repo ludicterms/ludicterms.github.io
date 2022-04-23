@@ -39,9 +39,6 @@ const ContentDetail = () => {
     return () => setWidth(null);
   }, [width, setWidth]); */
 
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   if (isLoading) return <p style={{ textAlign: "center" }}>Loading...</p>;
 
