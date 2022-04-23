@@ -18,6 +18,14 @@ const StyledWrapper = styled.div`
   }
 `;
 
+const TabletUpOnly = styled.span`
+  display: block;
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+`;
+
 const ContentDetail = () => {
   const { contentId } = useParams();
   const navigate = useNavigate();
@@ -30,6 +38,10 @@ const ContentDetail = () => {
     if (width > breakpoint) window.scrollTo(0, 0);
     return () => setWidth(null);
   }, [width, setWidth]); */
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (isLoading) return <p style={{ textAlign: "center" }}>Loading...</p>;
 
@@ -55,7 +67,9 @@ const ContentDetail = () => {
           {!isLoading && <Article article={article} />}
         </div>
       </Section>
-      <TableOfContents />
+      <TabletUpOnly>
+        <TableOfContents />
+      </TabletUpOnly>
     </StyledWrapper>
   );
 };

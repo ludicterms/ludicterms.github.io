@@ -41,6 +41,14 @@ const StyledMarkdown = styled(Markdown)`
       width: 60%;
     }
 
+    a {
+      color: #006838;
+      text-decoration: none;
+      :hover {
+        text-decoration: underline;
+      }
+    }
+
     @media screen and (max-width: 900px) {
       img {
         width: 100%;
@@ -81,7 +89,7 @@ const Article = ({ article }) => {
       </h3>
       <Markdown children={article.abstract} />
       <MobileOnly>
-        <TableOfContents isMobile={true}/>
+        <TableOfContents isMobile={true} />
       </MobileOnly>
       <StyledMarkdown
         remarkPlugins={[remarkGfm]}
@@ -95,9 +103,15 @@ const Article = ({ article }) => {
       >
         Bibliography
       </h1>
-      <Markdown children={article.bibliography} rehypePlugins={[rehypeSlug]} />
+      <StyledMarkdown
+        children={article.bibliography}
+        rehypePlugins={[rehypeSlug]}
+      />
       {article.authorInfo && (
-        <Markdown children={article.authorInfo} rehypePlugins={[rehypeSlug]} />
+        <StyledMarkdown
+          children={article.authorInfo}
+          rehypePlugins={[rehypeSlug]}
+        />
       )}
       <h1 id={`copyright-${article.slug}`} style={{ scrollMarginTop: "120px" }}>
         Copyright
