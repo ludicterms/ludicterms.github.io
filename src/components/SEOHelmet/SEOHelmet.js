@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import eoltLogoWhite from "../../assets/eolt_logo_white.png";
+import eoltLogoWhite from "../../../public/eolt_logo_white.png";
 
 const SEOHelmet = ({
   title = 'Encylopedia of Ludic Terms',
