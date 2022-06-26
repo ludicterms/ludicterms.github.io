@@ -15,13 +15,13 @@ const SEOHelmet = ({
     <meta itemProp="description" content={description} />
     <meta
       itemProp="image"
-      content={"https://drive.google.com/file/d/1JQ7mUVq9gmJjyFuktTVm3kZ2IeIlmEfe/view?usp=sharing"}
+      content={"https://drive.google.com/uc?id=1JQ7mUVq9gmJjyFuktTVm3kZ2IeIlmEfe"}
     />
     <meta property="og:title" content={title} />
     <meta property="og:type" content={type} />
     <meta
       property="og:image"
-      content={"https://drive.google.com/file/d/1JQ7mUVq9gmJjyFuktTVm3kZ2IeIlmEfe/view?usp=sharing"}
+      content={"https://drive.google.com/uc?id=1JQ7mUVq9gmJjyFuktTVm3kZ2IeIlmEfe"}
     />
     <meta property="og:image:width" content={'2048'} />
     <meta property="og:image:height" content={'1200'} />
