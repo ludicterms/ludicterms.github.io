@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.c317755e.chunk.css",
-    "main.js": "/static/js/main.014e8613.chunk.js",
-    "main.js.map": "/static/js/main.014e8613.chunk.js.map",
+    "main.js": "/static/js/main.00a441ad.chunk.js",
+    "main.js.map": "/static/js/main.00a441ad.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.9af3d8c9.js",
     "runtime-main.js.map": "/static/js/runtime-main.9af3d8c9.js.map",
     "static/js/2.5962c9db.chunk.js": "/static/js/2.5962c9db.chunk.js",
@@ -14,13 +14,12 @@
     "static/js/2.5962c9db.chunk.js.LICENSE.txt": "/static/js/2.5962c9db.chunk.js.LICENSE.txt",
     "static/media/eolt_logo.69abea68.svg": "/static/media/eolt_logo.69abea68.svg",
     "static/media/eolt_logo_white.5142cef3.svg": "/static/media/eolt_logo_white.5142cef3.svg",
-    "static/media/eolt_logo_white.f8698ac4.png": "/static/media/eolt_logo_white.f8698ac4.png",
     "static/media/erc_eu_logo.22d24860.jpg": "/static/media/erc_eu_logo.22d24860.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.9af3d8c9.js",
     "static/js/2.5962c9db.chunk.js",
     "static/css/main.c317755e.chunk.css",
-    "static/js/main.014e8613.chunk.js"
+    "static/js/main.00a441ad.chunk.js"
   ]
 }
