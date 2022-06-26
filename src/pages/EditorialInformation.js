@@ -3,6 +3,7 @@ import Section from "../components/UI/Section/Section";
 import styled from "styled-components";
 import Markdown from "react-markdown";
 import { useGeneralContent } from "../hooks/useGeneralContent";
+import SEOHelmet from "../components/SEOHelmet/SEOHelmet";
 
 const StyledList = styled.ul`
   line-height: 35px;
@@ -16,22 +17,25 @@ const EditorialInformation = () => {
   }, []);
 
   return (
-    <Section>
-      <div className="pageTitle">
-        <h1>Editorial Information</h1>
-      </div>
-      {!isLoading && (
-        <Markdown children={generalContent[0].fields.editorialText} />
-      )}
-      {isLoading && <p>Loading...</p>}
-      <h2>EoLT Editorial Board</h2>
-      <StyledList>
+    <React.Fragment>
+      <SEOHelmet title="Editorial information | Encylopedia of Ludic Terms" />
+      <Section>
+        <div className="pageTitle">
+          <h1>Editorial Information</h1>
+        </div>
         {!isLoading && (
-          <Markdown children={generalContent[0].fields.editorialBoard} />
+          <Markdown children={generalContent[0].fields.editorialText} />
         )}
         {isLoading && <p>Loading...</p>}
-      </StyledList>
-    </Section>
+        <h2>EoLT Editorial Board</h2>
+        <StyledList>
+          {!isLoading && (
+            <Markdown children={generalContent[0].fields.editorialBoard} />
+          )}
+          {isLoading && <p>Loading...</p>}
+        </StyledList>
+      </Section>
+    </React.Fragment>
   );
 };
 

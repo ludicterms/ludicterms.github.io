@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import SEOHelmet from "../components/SEOHelmet/SEOHelmet";
 import Section from "../components/UI/Section/Section";
 import { useArticles } from "../hooks/useArticles";
 
@@ -40,6 +41,7 @@ const RecentArticles = () => {
 
   return (
     <Section>
+      <SEOHelmet title="Recent Articles | Encyclopedia of Ludic Terms"/>
       <div className="pageTitle">
         <h1>Recent Articles</h1>
       </div>

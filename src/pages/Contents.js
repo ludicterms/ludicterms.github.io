@@ -8,6 +8,7 @@ import { useArticles } from "../hooks/useArticles";
 import Section from "../components/UI/Section/Section";
 import CardContainer from "../components/CardContainer/CardContainer";
 import { ContentBox } from "../components/UI/ContentBox.styles";
+import SEOHelmet from "../components/SEOHelmet/SEOHelmet";
 
 const Contents = () => {
   const [articles, isLoading] = useArticles();
@@ -26,22 +27,25 @@ const Contents = () => {
   );
 
   return (
-    <Section>
-      <SearchBar searchTerm={searchTerm} onChange={handleChange} />
-      {!!searchResults.length ? (
-        <CardContainer
-          isLoading={isLoading}
-          /* httpError={props.httpError} */
-          data={searchResults}
-          isHome={false}
-        />
-      ) : (
-        <ContentBox>
-          <h2>No results found</h2>
-          <p>Try to search for a different keyword or contact us</p>
-        </ContentBox>
-      )}
-    </Section>
+    <React.Fragment>
+      <SEOHelmet title="Browse Articles | Encylopedia of Ludic Terms" />
+      <Section>
+        <SearchBar searchTerm={searchTerm} onChange={handleChange} />
+        {!!searchResults.length ? (
+          <CardContainer
+            isLoading={isLoading}
+            /* httpError={props.httpError} */
+            data={searchResults}
+            isHome={false}
+          />
+        ) : (
+          <ContentBox>
+            <h2>No results found</h2>
+            <p>Try to search for a different keyword or contact us</p>
+          </ContentBox>
+        )}
+      </Section>
+    </React.Fragment>
   );
 };
 

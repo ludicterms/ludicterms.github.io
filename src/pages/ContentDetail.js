@@ -6,6 +6,7 @@ import { useSingleArticle } from "../hooks/useSingleArticle";
 import Button from "../components/UI/Button/Button";
 import Article from "../components/Article/Article";
 import TableOfContents from "../components/TableOfContents/TableOfContents";
+import SEOHelmet from "../components/SEOHelmet/SEOHelmet";
 /* import useViewport from "../hooks/useVIewport"
  */
 const StyledWrapper = styled.div`
@@ -39,7 +40,6 @@ const ContentDetail = () => {
     return () => setWidth(null);
   }, [width, setWidth]); */
 
-
   if (isLoading) return <p style={{ textAlign: "center" }}>Loading...</p>;
 
   const handleBackClick = (e) => {
@@ -51,23 +51,30 @@ const ContentDetail = () => {
   document.getElementById("root");
 
   return (
-    <StyledWrapper>
-      <Section>
-        <div>
-          <Button
-            className={"btnLight leftAligned"}
-            style={{ width: "70px", height: "15px" }}
-            onClick={handleBackClick}
-            buttonName={"Go Back"}
-            path={""}
-          ></Button>
-          {!isLoading && <Article article={article} />}
-        </div>
-      </Section>
-      <TabletUpOnly>
-        <TableOfContents />
-      </TabletUpOnly>
-    </StyledWrapper>
+    <React.Fragment>
+      <SEOHelmet
+        title={`${article.mainTitle} | Encylopedia of Ludic Terms`}
+        description={article.abstract}
+        type="article"
+      />
+      <StyledWrapper>
+        <Section>
+          <div>
+            <Button
+              className={"btnLight leftAligned"}
+              style={{ width: "70px", height: "15px" }}
+              onClick={handleBackClick}
+              buttonName={"Go Back"}
+              path={""}
+            ></Button>
+            {!isLoading && <Article article={article} />}
+          </div>
+        </Section>
+        <TabletUpOnly>
+          <TableOfContents />
+        </TabletUpOnly>
+      </StyledWrapper>
+    </React.Fragment>
   );
 };
 

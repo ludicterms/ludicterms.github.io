@@ -8,6 +8,7 @@ import CardContainer from "../components/CardContainer/CardContainer";
 import { useArticles } from "../hooks/useArticles";
 import Button from "../components/UI/Button/Button";
 import { ContentBox } from "../components/UI/ContentBox.styles";
+import SEOHelmet from "../components/SEOHelmet/SEOHelmet";
 
 const Wrapper = styled.div`
   margin-top: 100px;
@@ -24,7 +25,7 @@ const Home = () => {
     }
     return 0;
   });
-  
+
   const [isActive, setIsActive] = useState(false);
 
   const { searchResults, searchTerm, handleChange } = useSearchData(
@@ -44,46 +45,52 @@ const Home = () => {
   }, []);
 
   return (
-    <Wrapper>
-      <Section>
-        <SearchBar
-          searchTerm={searchTerm}
-          onChange={handleChange}
-          onKeyUp={handleChange}
-          onBlur={handleBlur}
-        />
-        {isActive &&
-          (!!searchResults.length ? (
-            <CardContainer
-              isLoading={isLoading}
-              data={searchResults}
-              isHome={true}
-            />
-          ) : (
-            <ContentBox>
-              <h2>No results found</h2>
-              <p>Try to search for a different keyword or contact us</p>
-            </ContentBox>
-          ))}
-      </Section>
-
-      {!isActive && (
-        <React.Fragment>
-          <Button
-            path={"articles"}
-            className="btnDark centered"
-            style={{
-              width: "100px",
-              height: "20px",
-              fontSize: "18px",
-              fontWeight: 500,
-            }}
-            buttonName={"Browse"}
+    <React.Fragment>
+      <SEOHelmet
+        title="Encylopedia of Ludic Terms"
+        description="An open-access lexicon covering terms related to the study of games and play"
+      />
+      <Wrapper>
+        <Section>
+          <SearchBar
+            searchTerm={searchTerm}
+            onChange={handleChange}
+            onKeyUp={handleChange}
+            onBlur={handleBlur}
           />
-          <Info />
-        </React.Fragment>
-      )}
-    </Wrapper>
+          {isActive &&
+            (!!searchResults.length ? (
+              <CardContainer
+                isLoading={isLoading}
+                data={searchResults}
+                isHome={true}
+              />
+            ) : (
+              <ContentBox>
+                <h2>No results found</h2>
+                <p>Try to search for a different keyword or contact us</p>
+              </ContentBox>
+            ))}
+        </Section>
+
+        {!isActive && (
+          <React.Fragment>
+            <Button
+              path={"articles"}
+              className="btnDark centered"
+              style={{
+                width: "100px",
+                height: "20px",
+                fontSize: "18px",
+                fontWeight: 500,
+              }}
+              buttonName={"Browse"}
+            />
+            <Info />
+          </React.Fragment>
+        )}
+      </Wrapper>
+    </React.Fragment>
   );
 };
 
