@@ -48,7 +48,7 @@ const ContentDetail = () => {
     navigate(-1);
   };
 
-  document.getElementById("root");
+  /* document.getElementById("root"); */
 
   return (
     <React.Fragment>

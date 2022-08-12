@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 
 import { getSingleArticle } from "../contentful";
 
-export const useSingleArticle = (slug) => {
-  const promise = getSingleArticle(slug);
+const promise = (slug) => getSingleArticle(slug);
 
+export const useSingleArticle = (slug) => {
   const [article, setArticle] = useState(null);
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    promise
+    promise(slug)
       .then((result) => {
         setArticle(result[0].fields);
         setLoading(false);
@@ -17,7 +17,7 @@ export const useSingleArticle = (slug) => {
       .catch((err) => {
         alert(err);
       });
-  }, [promise]);
+  }, [slug]);
 
   return [article, isLoading];
 };
