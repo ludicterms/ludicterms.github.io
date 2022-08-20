@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
-import euLogo from "../../assets/erc_eu_logo.jpg";
+import euLogo from "../../assets/erc_eu_logo.png";
 
 const Footer = () => {
   return (
