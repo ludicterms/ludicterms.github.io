@@ -60,7 +60,16 @@ const Footer = () => {
         <ul className={styles.ftLegalList}>
           <li>
             &copy; 2022 Encyclopedia of Ludic Terms. All Rights Reserved (unless
-            specified otherwise). Developed by Sophia Auer.
+            specified otherwise). Developed by{" "}
+            <a
+              href="https://sophiaauer.me/"
+              rel="noreferrer"
+              target="_blank"
+              style={{ textDecoration: "none", color: "#bbb" }}
+            >
+              Sophia Auer
+            </a>
+            .
           </li>
         </ul>
       </section>
