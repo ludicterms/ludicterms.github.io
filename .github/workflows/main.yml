@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+  pull_request:
+
 env:
   REACT_APP_CONTENTFUL_ACCESS_TOKEN: ${{ secrets.REACT_APP_CONTENTFUL_ACCESS_TOKEN }}
   REACT_APP_CONTENFUL_SPACE_ID: ${{ secrets.REACT_APP_CONTENFUL_SPACE_ID }}
@@ -14,7 +16,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    
+
+    - uses: actions/setup-node@v6
+      with:
+        # Version Spec of the version to use in SemVer notation.
+        # It also admits such aliases as lts/*, latest, nightly and canary builds
+        # Examples: 12.x, 10.15.1, >=10.15.0, lts/Hydrogen, 16-nightly, latest, node
+        node-version: '16'
+
     - uses: actions/checkout@v1
       with:
        persist-credentials: false
@@ -27,6 +36,7 @@ jobs:
         npm run build
   
     - name: Deploy
+      if: github.ref == 'refs/heads/main'
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
