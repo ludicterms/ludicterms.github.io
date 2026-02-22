@@ -59,7 +59,7 @@ const Footer = () => {
       <section className={styles.ftLegal}>
         <ul className={styles.ftLegalList}>
           <li>
-            &copy; 2026 Encyclopedia of Ludic Terms. All Rights Reserved (unless
+            &copy; 2022 Encyclopedia of Ludic Terms. All Rights Reserved (unless
             specified otherwise). Developed by Sophia Auer.
           </li>
         </ul>
