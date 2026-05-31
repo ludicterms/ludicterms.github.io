@@ -18,7 +18,7 @@ const EditorialInformation = () => {
 
   return (
     <React.Fragment>
-      <SEOHelmet title="Editorial information | Encylopedia of Ludic Terms" />
+      <SEOHelmet title="Editorial information | Encyclopedia of Ludic Terms" />
       <Section>
         <div className="pageTitle">
           <h1>Editorial Information</h1>

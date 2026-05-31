@@ -13,7 +13,7 @@ const HowToCite = () => {
 
   return (
     <React.Fragment>
-      <SEOHelmet title="How to Cite | Encylopedia of Ludic Terms"/>
+      <SEOHelmet title="How to Cite | Encyclopedia of Ludic Terms"/>
       <Section>
         <div className="pageTitle">
           <h1>How to Cite</h1>

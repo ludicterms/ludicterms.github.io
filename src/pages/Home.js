@@ -47,7 +47,7 @@ const Home = () => {
   return (
     <React.Fragment>
       <SEOHelmet
-        title="Encylopedia of Ludic Terms"
+        title="Encyclopedia of Ludic Terms"
         description="An open-access lexicon covering terms related to the study of games and play"
       />
       <Wrapper>

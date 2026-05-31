@@ -37,7 +37,7 @@ const TableOfContents = () => {
 
   return (
     <React.Fragment>
-      <SEOHelmet title="Table of Contents | Encylopedia of Ludic Terms"/>
+      <SEOHelmet title="Table of Contents | Encyclopedia of Ludic Terms"/>
       <Section>
         <div className="pageTitle">
           <h1>Table of Contents</h1>

@@ -53,7 +53,7 @@ const ContentDetail = () => {
   return (
     <React.Fragment>
       <SEOHelmet
-        title={`${article.mainTitle} | Encylopedia of Ludic Terms`}
+        title={`${article.mainTitle} | Encyclopedia of Ludic Terms`}
         description={article.abstract}
         type="article"
       />

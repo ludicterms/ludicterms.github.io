@@ -28,7 +28,7 @@ const Contents = () => {
 
   return (
     <React.Fragment>
-      <SEOHelmet title="Browse Articles | Encylopedia of Ludic Terms" />
+      <SEOHelmet title="Browse Articles | Encyclopedia of Ludic Terms" />
       <Section>
         <SearchBar searchTerm={searchTerm} onChange={handleChange} />
         {!!searchResults.length ? (
