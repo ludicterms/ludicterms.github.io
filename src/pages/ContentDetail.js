@@ -7,8 +7,8 @@ import Button from "../components/UI/Button/Button";
 import Article from "../components/Article/Article";
 import TableOfContents from "../components/TableOfContents/TableOfContents";
 import SEOHelmet from "../components/SEOHelmet/SEOHelmet";
-/* import useViewport from "../hooks/useVIewport"
- */
+import { Helmet } from "react-helmet-async"; 
+
 const StyledWrapper = styled.div`
   position: relative;
   height: max-content;
@@ -32,31 +32,39 @@ const ContentDetail = () => {
   const navigate = useNavigate();
   const [article, isLoading] = useSingleArticle(contentId);
 
-  /* const { width, setWidth } = useViewport();
-  const breakpoint = 475;
-
-  React.useEffect(() => {
-    if (width > breakpoint) window.scrollTo(0, 0);
-    return () => setWidth(null);
-  }, [width, setWidth]); */
-
   if (isLoading) return <p style={{ textAlign: "center" }}>Loading...</p>;
 
   const handleBackClick = (e) => {
     e.preventDefault();
-
     navigate(-1);
   };
 
-  /* document.getElementById("root"); */
+  // Pulling properties exactly as they are named in the Article setup
+  const title = article?.mainTitle || "Untitled Entry";
+  const authorName = article?.author || "Encyclopedia Contributor";
+  const abstractText = article?.abstract || "";
+  
+  // Checking if contentful has an update or post date, otherwise fallback to first publication year
+  const publishDate = article?.date || article?.publishDate || "2022";
 
   return (
     <React.Fragment>
+      {/* Your original built-in SEO wrapper */}
       <SEOHelmet
-        title={`${article.mainTitle} | Encyclopedia of Ludic Terms`}
-        description={article.abstract}
+        title={`${title} | Encyclopedia of Ludic Terms`}
+        description={abstractText}
         type="article"
       />
+      
+      {/* New Google Scholar Targeting Headers */}
+      <Helmet>
+        <meta name="citation_title" content={title} />
+        <meta name="citation_author" content={authorName} />
+        <meta name="citation_publication_date" content={publishDate} />
+        <meta name="citation_journal_title" content="Encyclopedia of Ludic Terms" />
+        <meta name="citation_abstract" content={abstractText} />
+      </Helmet>
+
       <StyledWrapper>
         <Section>
           <div>

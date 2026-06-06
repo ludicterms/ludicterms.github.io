@@ -6,39 +6,41 @@ on:
       - main
   pull_request:
 
+# Defining these globally ensures they are injected into every single step, including react-snap
 env:
   REACT_APP_CONTENTFUL_ACCESS_TOKEN: ${{ secrets.REACT_APP_CONTENTFUL_ACCESS_TOKEN }}
-  REACT_APP_CONTENFUL_SPACE_ID: ${{ secrets.REACT_APP_CONTENFUL_SPACE_ID }}
+  REACT_APP_CONTENTFUL_SPACE_ID: ${{ secrets.REACT_APP_CONTENTFUL_SPACE_ID }}
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-
-    - uses: actions/setup-node@v6
+    # 1. Checkout the repository files first
+    - uses: actions/checkout@v4
       with:
-        # Version Spec of the version to use in SemVer notation.
-        # It also admits such aliases as lts/*, latest, nightly and canary builds
-        # Examples: 12.x, 10.15.1, >=10.15.0, lts/Hydrogen, 16-nightly, latest, node
+        persist-credentials: false
+
+    # 2. Setup the Node.js environment
+    - uses: actions/setup-node@v4
+      with:
         node-version: '16'
 
-    - uses: actions/checkout@v1
-      with:
-       persist-credentials: false
-    - run: git config --global user.email ${{ secrets.USER_EMAIL }}
-    - run: git config --global user.name ${{ secrets.USER_NAME }}
+    # 3. Configure Git credentials
+    - run: git config --global user.email "${{ secrets.USER_EMAIL }}"
+    - run: git config --global user.name "${{ secrets.USER_NAME }}"
 
+    # 4. Install dependencies and run the build (including react-snap)
     - name: Build
       run: |
         npm install
         npm run build
   
+    # 5. Push the build folder to the gh-pages branch
     - name: Deploy
       if: github.ref == 'refs/heads/main'
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        token: ${{ secrets.ACCESS_TOKEN }} # Updated configuration key for v4
         BRANCH: gh-pages
         FOLDER: build
