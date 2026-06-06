@@ -6,17 +6,22 @@ import SEOHelmet from "../components/SEOHelmet/SEOHelmet";
 const AuthorList = () => {
   const [articles, loading] = useArticles();
 
-  const sortedAuthor = articles.sort((a, b) => {
-    if (a.fields.author < b.fields.author) {
-      return -1;
-    }
-    if (a.fields.author > b.fields.author) {
-      return 1;
-    }
+  // 1. Extract all author strings from the articles array
+  const allAuthors = articles.map((article) => article.fields.author);
+
+  // 2. Pass them into a Set to remove duplicates, then turn it back into a clean array
+  const uniqueAuthors = [...new Set(allAuthors)];
+
+  // 3. Sort the unique names alphabetically
+  const sortedAuthors = uniqueAuthors.sort((a, b) => {
+    if (a < b) return -1;
+    if (a > b) return 1;
     return 0;
   });
 
   React.useEffect(() => {
+    // Note: Since react-snap runs in a headless browser to build your HTML, 
+    // wrapping window.scrollTo in a standard useEffect hook is safe here.
     window.scrollTo(0, 0);
   }, []);
 
@@ -29,8 +34,11 @@ const AuthorList = () => {
         </div>
         <div>
           {!loading &&
-            sortedAuthor.length > 0 &&
-            sortedAuthor.map((item) => <p>{item.fields.author} </p>)}
+            sortedAuthors.length > 0 &&
+            sortedAuthors.map((authorName, index) => (
+              /* Added a unique 'key' prop using the index to prevent React console warnings */
+              <p key={index}>{authorName}</p>
+            ))}
         </div>
       </Section>
     </React.Fragment>
