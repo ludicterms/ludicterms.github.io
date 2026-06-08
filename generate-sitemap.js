@@ -1,10 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-// 1. Define your website's live URL
-const BASE_URL = 'https://ludicterms.github.io'; 
+// 1. Define  live custom domain
+const BASE_URL = 'https://eolt.org'; 
 
-// 2. Point to your compiled static build folder
+// 2. Point compiled static build folder
 const BUILD_DIR = path.join(__dirname, 'build');
 
 function getHtmlFiles(dir, fileList = []) {
@@ -17,6 +17,12 @@ function getHtmlFiles(dir, fileList = []) {
     if (stat.isDirectory()) {
       getHtmlFiles(filePath, fileList);
     } else if (file.endsWith('.html')) {
+      
+      // FIX: Skip technical system files that shouldn't be indexed
+      if (file === '200.html' || file === '404.html') {
+        return; 
+      }
+
       // Clean up the path to create a clean URL string
       let relativePath = path.relative(BUILD_DIR, filePath)
         .replace(/\\/g, '/') // Fix Windows backslashes
@@ -42,9 +48,9 @@ ${htmlFiles.map(urlPath => `  <url>
   </url>`).join('\n')}
 </urlset>`;
 
-  // 4. Save sitemap.xml directly into your build folder
+  // 4. Save sitemap.xml directly into build folder
   fs.writeFileSync(path.join(BUILD_DIR, 'sitemap.xml'), sitemapXml);
-  console.log(`✅ Success: sitemap.xml generated with ${htmlFiles.length} links!`);
+  console.log(`✅ Success: sitemap.xml generated with ${htmlFiles.length} clean links!`);
 } catch (error) {
   console.error('❌ Error generating sitemap:', error);
 }
