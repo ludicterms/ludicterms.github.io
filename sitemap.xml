@@ -1,202 +1,192 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ludicterms.github.io/200.html</loc>
+    <loc>https://eolt.org/about/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/404.html</loc>
+    <loc>https://eolt.org/articles/bleed/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/about/</loc>
+    <loc>https://eolt.org/articles/challenge/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/bleed/</loc>
+    <loc>https://eolt.org/articles/digital-games/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/challenge/</loc>
+    <loc>https://eolt.org/articles/electronic-sports/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/digital-games/</loc>
+    <loc>https://eolt.org/articles/game-character/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/electronic-sports/</loc>
+    <loc>https://eolt.org/articles/game-definition/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/game-character/</loc>
+    <loc>https://eolt.org/articles/game-feel/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/game-definition/</loc>
+    <loc>https://eolt.org/articles/game-history/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/game-feel/</loc>
+    <loc>https://eolt.org/articles/game-jams/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/game-history/</loc>
+    <loc>https://eolt.org/articles/game-ontology/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/game-jams/</loc>
+    <loc>https://eolt.org/articles/game-studies/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/game-ontology/</loc>
+    <loc>https://eolt.org/articles/games-and-realism/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/game-studies/</loc>
+    <loc>https://eolt.org/articles/history-games/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/games-and-realism/</loc>
+    <loc>https://eolt.org/articles/horror/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/history-games/</loc>
+    <loc>https://eolt.org/articles/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/horror/</loc>
+    <loc>https://eolt.org/articles/indie-games/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/</loc>
+    <loc>https://eolt.org/articles/interactivity/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/indie-games/</loc>
+    <loc>https://eolt.org/articles/interface/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/interactivity/</loc>
+    <loc>https://eolt.org/articles/level-design/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/interface/</loc>
+    <loc>https://eolt.org/articles/loot-boxes/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/level-design/</loc>
+    <loc>https://eolt.org/articles/ludic-performance/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/loot-boxes/</loc>
+    <loc>https://eolt.org/articles/modding/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/ludic-performance/</loc>
+    <loc>https://eolt.org/articles/monetization/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/modding/</loc>
+    <loc>https://eolt.org/articles/narratology/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/monetization/</loc>
+    <loc>https://eolt.org/articles/philosophical-games/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/narratology/</loc>
+    <loc>https://eolt.org/articles/quest/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/philosophical-games/</loc>
+    <loc>https://eolt.org/articles/simulation/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/quest/</loc>
+    <loc>https://eolt.org/articles/transgressive-play/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/simulation/</loc>
+    <loc>https://eolt.org/articles/transmedia/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/transgressive-play/</loc>
+    <loc>https://eolt.org/articles/virtual-reality/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/transmedia/</loc>
+    <loc>https://eolt.org/author-list/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/articles/virtual-reality/</loc>
+    <loc>https://eolt.org/contact/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/author-list/</loc>
+    <loc>https://eolt.org/editorial-information/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/contact/</loc>
+    <loc>https://eolt.org/how-to-cite/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/editorial-information/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ludicterms.github.io/how-to-cite/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ludicterms.github.io/</loc>
+    <loc>https://eolt.org/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/recent-articles/</loc>
+    <loc>https://eolt.org/recent-articles/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ludicterms.github.io/toc/</loc>
+    <loc>https://eolt.org/toc/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
