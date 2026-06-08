@@ -33,8 +33,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "postbuild": "react-snap && node generate-sitemap.js"
-
+  "postbuild": "react-snap && copy build\\index.html build\\404.html && node 404-fix.js && node generate-sitemap.js"
   },
   "reactSnap": {
     "puppeteerArgs": [

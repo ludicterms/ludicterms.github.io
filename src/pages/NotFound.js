@@ -1,3 +1,8 @@
+// NOTE: Look out for '404-fix.js' in the project root! 
+// This script runs post-build to force-center the layout and fix button dimensions.
+// Why? react-snap captures a broken, unhydrated layout snapshot of this page 
+// during compilation, which flashes when GitHub Pages serves the static 404.html.
+
 import React from "react";
 import styled from "styled-components";
 import Button from "../components/UI/Button/Button";
