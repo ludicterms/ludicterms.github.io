@@ -1,10 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-// 1. Define  live custom domain
+// Define  live custom domain
 const BASE_URL = 'https://eolt.org'; 
 
-// 2. Point compiled static build folder
+// Point compiled static build folder
 const BUILD_DIR = path.join(__dirname, 'build');
 
 function getHtmlFiles(dir, fileList = []) {
@@ -38,7 +38,7 @@ function getHtmlFiles(dir, fileList = []) {
 try {
   const htmlFiles = getHtmlFiles(BUILD_DIR);
   
-  // 3. Build the XML structure
+  // Build the XML structure
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${htmlFiles.map(urlPath => `  <url>
@@ -48,7 +48,7 @@ ${htmlFiles.map(urlPath => `  <url>
   </url>`).join('\n')}
 </urlset>`;
 
-  // 4. Save sitemap.xml directly into build folder
+  // Save sitemap.xml directly into build folder
   fs.writeFileSync(path.join(BUILD_DIR, 'sitemap.xml'), sitemapXml);
   console.log(`✅ Success: sitemap.xml generated with ${htmlFiles.length} clean links!`);
 } catch (error) {

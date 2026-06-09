@@ -49,7 +49,7 @@ const ContentDetail = () => {
 
   return (
     <React.Fragment>
-      {/* Your original built-in SEO wrapper */}
+      {/* Original built-in SEO wrapper */}
       <SEOHelmet
         title={`${title} | Encyclopedia of Ludic Terms`}
         description={abstractText}
