@@ -29,6 +29,7 @@ const MobileOnly = styled.span`
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
+
   const handleScroll = () => {
     const offset = window.scrollY;
     if (offset >= 100) {
@@ -40,7 +41,12 @@ const NavBar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-  }, [scrolled]);
+    
+    // Clean up event listener on component unmount to prevent memory leaks
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // Run once on mount
 
   const navClasses = scrolled ? styles.scrolled : "";
 
@@ -56,7 +62,7 @@ const NavBar = () => {
       <nav>
         <div className={styles.buttonContainer}>
           <NavLink
-            to="toc"
+            to="toc/"
             className={(navData) =>
               navData.isActive ? styles.active : styles.btnLight
             }
@@ -65,7 +71,7 @@ const NavBar = () => {
             <MobileOnly>ToC</MobileOnly>
           </NavLink>
           <NavLink
-            to="about"
+            to="about/"
             className={(navData) =>
               navData.isActive ? styles.active : styles.btnLight
             }
@@ -73,7 +79,7 @@ const NavBar = () => {
             About
           </NavLink>
           <NavLink
-            to="contact"
+            to="contact/"
             className={(navData) =>
               navData.isActive ? styles.active : styles.btnLight
             }
