@@ -40,8 +40,7 @@
     "puppeteerArgs": [
       "--no-sandbox",
       "--disable-setuid-sandbox"
-    ],
-    "saveAs": "directory"
+    ]
   },
   "eslintConfig": {
     "extends": [
