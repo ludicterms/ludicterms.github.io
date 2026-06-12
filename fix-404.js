@@ -7,8 +7,7 @@ try {
   if (fs.existsSync(fileToPatch)) {
     let content = fs.readFileSync(fileToPatch, 'utf8');
 
-    // This CSS block overrides the rigid spacing, centers the elements, 
-    // and adjusts the button width so text never spills out.
+    // This CSS block overrides the rigid spacing and centers the elements
     const customStyles = `
 <style>
   .not-found-wrapper {
@@ -25,18 +24,6 @@ try {
   .not-found-wrapper h1 { font-size: 120px !important; color: #006838 !important; margin: 0 !important; letter-spacing: 15px !important; }
   .not-found-wrapper h3 { font-size: 45px !important; margin: 0 !important; }
   .not-found-wrapper h4 { font-size: 30px !important; margin: 0 !important; }
-  
-  /* Fix the button boundaries and ensure the phrase fits */
-  .btnDark.centered {
-    width: auto !important;
-    min-width: 180px !important;
-    height: auto !important;
-    padding: 12px 24px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-  }
 </style>
 `;
 
