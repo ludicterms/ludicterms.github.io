@@ -11,7 +11,7 @@ try {
     // and adjusts the button width so text never spills out.
     const customStyles = `
 <style>
-  .euaJAU {
+  .not-found-wrapper {
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
@@ -22,12 +22,12 @@ try {
     margin: 100px auto !important;
     box-sizing: border-box !important;
   }
-  .euaJAU h1 { font-size: 120px !important; color: #006838 !important; margin: 0 !important; letter-spacing: 5px !important; }
-  .euaJAU h3 { font-size: 45px !important; margin: 0 !important; }
-  .euaJAU h4 { font-size: 30px !important; margin: 0 !important; }
+  .not-found-wrapper h1 { font-size: 120px !important; color: #006838 !important; margin: 0 !important; letter-spacing: 15px !important; }
+  .not-found-wrapper h3 { font-size: 45px !important; margin: 0 !important; }
+  .not-found-wrapper h4 { font-size: 30px !important; margin: 0 !important; }
   
   /* Fix the button boundaries and ensure the phrase fits */
-  .btnDark.centered, .bVtFAk a {
+  .btnDark.centered {
     width: auto !important;
     min-width: 180px !important;
     height: auto !important;

@@ -1,40 +1,10 @@
-// NOTE: Look out for '404-fix.js' in the project root! 
-// This script runs post-build to force-center the layout and fix button dimensions.
-// Why? react-snap captures a broken, unhydrated layout snapshot of this page 
-// during compilation, which flashes when GitHub Pages serves the static 404.html.
-
 import React from "react";
-import styled from "styled-components";
 import Button from "../components/UI/Button/Button";
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  align-content: center;
-  margin-top: 100px;
-  gap: 20px;
-
-  h1 {
-    font-size: 120px;
-    color: #006838;
-    margin: 0;
-    letter-spacing: 15px;
-  }
-  h3 {
-    font-size: 45px;
-    margin: 0;
-  }
-  h4 {
-    font-size: 30px;
-    margin: 0;
-  }
-`;
+import "./NotFound.css";
 
 const NotFound = () => {
   return (
-    <Wrapper style={{ textAlign: "center" }}>
+    <div className="not-found-wrapper">
       <h1>404</h1>
       <h3>Oops...</h3>
       <h4>page not found</h4>
@@ -43,7 +13,7 @@ const NotFound = () => {
         buttonName={"Go back to home"}
         className="btnDark centered"
       />
-    </Wrapper>
+    </div>
   );
 };
 

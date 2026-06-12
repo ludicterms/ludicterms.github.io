@@ -1,3 +1,4 @@
+import NotFound from "./NotFound";
 import React from "react";
 import styled from "styled-components";
 import { useParams, useNavigate } from "react-router-dom";
@@ -33,6 +34,14 @@ const ContentDetail = () => {
   const [article, isLoading] = useSingleArticle(contentId);
 
   if (isLoading) return <p style={{ textAlign: "center" }}>Loading...</p>;
+
+  if (!article) {
+    return (
+      <React.Fragment>
+        <NotFound />
+      </React.Fragment>
+    );
+  }
 
   const handleBackClick = (e) => {
     e.preventDefault();

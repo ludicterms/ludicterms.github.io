@@ -11,11 +11,13 @@ export const useSingleArticle = (slug) => {
   useEffect(() => {
     promise(slug)
       .then((result) => {
-        setArticle(result[0].fields);
+        setArticle(result.length > 0 ? result[0].fields : null);
         setLoading(false);
       })
       .catch((err) => {
-        alert(err);
+        console.error(err);
+        setArticle(null);
+        setLoading(false);
       });
   }, [slug]);
 
