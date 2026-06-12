@@ -34,7 +34,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "postbuild": "react-snap && cp build/index.html build/404.html && node fix-404.js && node generate-sitemap.js",
-    "build:windows": "npm run build && react-snap && copy build\\404\\index.html build\\404.html && node fix-404.js && node generate-sitemap.js"  },
+    "build:windows": "npm run build && react-snap && copy build\\index.html build\\404.html && node fix-404.js && node generate-sitemap.js"  
+  },
   "reactSnap": {
     "include": ["/404"],
     "puppeteerArgs": [
