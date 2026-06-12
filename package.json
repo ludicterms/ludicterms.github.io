@@ -33,7 +33,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "postbuild": "react-snap && node -e \"require('fs').copyFileSync('build/404/index.html','build/404.html')\" && node generate-sitemap.js",
+    "postbuild": "react-snap & node -e \"require('fs').copyFileSync('build/404/index.html','build/404.html')\" & node generate-sitemap.js",
     "build:windows": "npm run build && react-snap && node -e \"require('fs').copyFileSync('build/404/index.html','build/404.html')\" && node generate-sitemap.js"  
   },
   "reactSnap": {

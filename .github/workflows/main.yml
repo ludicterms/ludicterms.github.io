@@ -36,7 +36,7 @@ jobs:
       run: |
         npm install
         npm run build
-  
+
     # 5. Push the build folder to the gh-pages branch
     - name: Deploy
       if: github.ref == 'refs/heads/main'
@@ -45,3 +45,13 @@ jobs:
         token: ${{ secrets.ACCESS_TOKEN }} # Updated configuration key for v4
         BRANCH: gh-pages
         FOLDER: build
+
+    # 6. Notify Discord if Build or Deploy fails
+    - name: Notify Discord on failure
+      if: failure()
+      run: |
+        curl -H "Content-Type: application/json" \
+          -d "$(jq -n \
+            --arg content "â Build or react-snap crashed on main branch. Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            '{content: $content}')" \
+          ${{ secrets.DISCORD_WEBHOOK_URL }}
