@@ -33,11 +33,11 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "postbuild": "react-snap && node -e \"require('fs').copyFileSync('build/index.html','build/404.html')\" && node fix-404.js && node generate-sitemap.js",
-    "build:windows": "npm run build && react-snap && node -e \"require('fs').copyFileSync('build/index.html','build/404.html')\" && node fix-404.js && node generate-sitemap.js"  
+    "postbuild": "react-snap && node -e \"require('fs').copyFileSync('build/404/index.html','build/404.html')\" && node generate-sitemap.js",
+    "build:windows": "npm run build && react-snap && node -e \"require('fs').copyFileSync('build/404/index.html','build/404.html')\" && node generate-sitemap.js"  
   },
   "reactSnap": {
-    "include": ["/404"],
+    "include": ["/404", "/about", "/contact", "/toc", "/author-list", "/editorial-information", "/how-to-cite", "/recent-articles"],
     "puppeteerArgs": [
       "--no-sandbox",
       "--disable-setuid-sandbox"
