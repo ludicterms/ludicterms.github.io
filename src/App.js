@@ -39,6 +39,7 @@ const App = () => {
             <Route path="/toc" element={<TableOfContents />} />
             <Route path="/how-to-cite" element={<HowToCite />} />
             <Route path="/recent-articles" element={<RecentArticles />} />
+            <Route path="/404" element={<NotFound />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
