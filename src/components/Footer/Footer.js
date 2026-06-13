@@ -11,16 +11,16 @@ const Footer = () => {
           <p className={styles.ftTitle}>About</p>
           <ul>
             <li>
-              <Link to="editorial-information">Editorial Information</Link>
+              <Link to="/editorial-information/">Editorial Information</Link>
             </li>
             <li>
-              <Link to="about">About the EoLT</Link>
+              <Link to="/about/">About the EoLT</Link>
             </li>
             <li>
-              <Link to="how-to-cite">How to Cite the EoLT</Link>
+              <Link to="/how-to-cite/">How to Cite the EoLT</Link>
             </li>
             <li>
-              <Link to="contact">Contact</Link>
+              <Link to="/contact/">Contact</Link>
             </li>
           </ul>
         </div>
@@ -28,13 +28,13 @@ const Footer = () => {
           <p className={styles.ftTitle}>Browse</p>
           <ul>
             <li>
-              <Link to="toc">Table of Contents</Link>
+              <Link to="/toc/">Table of Contents</Link>
             </li>
             <li>
-              <Link to="author-list">List of Authors</Link>
+              <Link to="/author-list/">List of Authors</Link>
             </li>
             <li>
-              <Link to="recent-articles">Recent Articles</Link>
+              <Link to="/recent-articles/">Recent Articles</Link>
             </li>
           </ul>
         </div>

@@ -76,7 +76,7 @@ const Home = () => {
         {!isActive && (
           <React.Fragment>
             <Button
-              path={"articles"}
+              path={"/articles/"}
               className="btnDark centered"
               style={{
                 width: "100px",
