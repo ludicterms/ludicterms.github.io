@@ -33,7 +33,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "postbuild": "react-snap; node scripts/generate-flat-html.js; node generate-sitemap.js",
+    "postbuild": "react-snap & node scripts/generate-flat-html.js & node generate-sitemap.js",
     "build:windows": "npm run build && react-snap && node scripts/generate-flat-html.js && node generate-sitemap.js"  
   },
   "reactSnap": {
