@@ -62,7 +62,7 @@ const NavBar = () => {
       <nav>
         <div className={styles.buttonContainer}>
           <NavLink
-            to="/toc/"
+            to="toc"
             className={(navData) =>
               navData.isActive ? styles.active : styles.btnLight
             }
@@ -71,7 +71,7 @@ const NavBar = () => {
             <MobileOnly>ToC</MobileOnly>
           </NavLink>
           <NavLink
-            to="/about/"
+            to="about"
             className={(navData) =>
               navData.isActive ? styles.active : styles.btnLight
             }
@@ -79,7 +79,7 @@ const NavBar = () => {
             About
           </NavLink>
           <NavLink
-            to="/contact/"
+            to="contact"
             className={(navData) =>
               navData.isActive ? styles.active : styles.btnLight
             }

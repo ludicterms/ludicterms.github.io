@@ -58,7 +58,7 @@ const TableOfContents = () => {
             sortedArticles.map((item) => (
               /* Correct HTML Syntax: <ul> -> <li> -> <a> */
               <li key={item.fields.slug}>
-                <StyledLink to={`/articles/${item.fields.slug}/`}>
+                <StyledLink to={`../articles/${item.fields.slug}`}>
                   {item.fields.mainTitle}
                 </StyledLink>
               </li>
