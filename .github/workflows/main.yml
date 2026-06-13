@@ -52,6 +52,6 @@ jobs:
       run: |
         curl -H "Content-Type: application/json" \
           -d "$(jq -n \
-            --arg content "â Build or react-snap crashed on main branch. Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            --arg content "[FAIL] Build or react-snap crashed on main branch. Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
             '{content: $content}')" \
           ${{ secrets.DISCORD_WEBHOOK_URL }}
