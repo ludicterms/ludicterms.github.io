@@ -1,11 +1,18 @@
 const fs = require('fs');
 const path = require('path');
 
-// Define  live custom domain
+// Define live custom domain
 const BASE_URL = 'https://eolt.org'; 
 
 // Point compiled static build folder
 const BUILD_DIR = path.join(__dirname, 'build');
+
+// Collect top-level directories present in the build
+const PRODUCTION_DIRS = new Set(
+  fs.readdirSync(BUILD_DIR, { withFileTypes: true })
+    .filter(e => e.isDirectory())
+    .map(e => e.name)
+);
 
 function getHtmlFiles(dir, fileList = []) {
   const files = fs.readdirSync(dir);
@@ -17,10 +24,16 @@ function getHtmlFiles(dir, fileList = []) {
     if (stat.isDirectory()) {
       getHtmlFiles(filePath, fileList);
     } else if (file.endsWith('.html')) {
-      
-      // FIX: Skip technical system files that shouldn't be indexed
+
+      // Skip technical system files that shouldn't be indexed
       if (file === '200.html' || file === '404.html') {
-        return; 
+        return;
+      }
+
+      // Skip flat .html files that have a corresponding directory (duplicate)
+      const nameWithoutExt = file.replace('.html', '');
+      if (PRODUCTION_DIRS.has(nameWithoutExt)) {
+        return;
       }
 
       // Clean up the path to create a clean URL string
