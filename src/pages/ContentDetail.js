@@ -52,6 +52,7 @@ const ContentDetail = () => {
   const title = article?.mainTitle || "Untitled Entry";
   const authorName = article?.author || "Encyclopedia Contributor";
   const abstractText = article?.abstract || "";
+  const editorName = "Pawel Grabarczyk";
   
   // Checking if contentful has an update or post date, otherwise fallback to first publication year
   const publishDate = article?.date || article?.publishDate || "2022";
@@ -69,8 +70,9 @@ const ContentDetail = () => {
       <Helmet>
         <meta name="citation_title" content={title} />
         <meta name="citation_author" content={authorName} />
+        <meta name="citation_editor" content={editorName} />
         <meta name="citation_publication_date" content={publishDate} />
-        <meta name="citation_journal_title" content="Encyclopedia of Ludic Terms" />
+        <meta name="citation_book_title" content="Encyclopedia of Ludic Terms" />
         <meta name="citation_abstract" content={abstractText} />
       </Helmet>
 
