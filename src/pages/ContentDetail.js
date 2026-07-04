@@ -76,6 +76,20 @@ const ContentDetail = () => {
         <meta name="citation_abstract" content={abstractText} />
       </Helmet>
 
+      {/* COinS for Zotero */}
+      <span
+        className="Z3988"
+        title={[
+          "ctx_ver=Z39.88-2004",
+          "rft_val_fmt=info:ofi/fmt:kev:mtx:book",
+          "rft.genre=bookitem",
+          `rft.atitle=${encodeURIComponent(title)}`,
+          "rft.btitle=Encyclopedia%20of%20Ludic%20Terms",
+          `rft.date=${publishDate}`,
+          `rft.au=${encodeURIComponent(authorName)}`,
+        ].join("&")}
+      />
+
       <StyledWrapper>
         <Section>
           <div>
