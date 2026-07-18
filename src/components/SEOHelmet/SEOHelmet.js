@@ -47,6 +47,7 @@ const SEOHelmet = ({
 
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content="Encyclopedia of Ludic Terms" />
+      <meta property="og:url" content={canonicalUrl} />
     </Helmet>
   );
 };
