@@ -33,6 +33,10 @@ const ContentDetail = () => {
   const navigate = useNavigate();
   const [article, isLoading] = useSingleArticle(contentId);
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   if (isLoading) return <p style={{ textAlign: "center" }}>Loading...</p>;
 
   if (!article) {

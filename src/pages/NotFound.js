@@ -19,6 +19,10 @@ const h3Style = { fontSize: 45, margin: 0 };
 const h4Style = { fontSize: 30, margin: 0 };
 
 const NotFound = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div style={wrapperStyle}>
       <h1 style={h1Style}>404</h1>
